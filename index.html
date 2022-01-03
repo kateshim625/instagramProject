@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" class="js not-logged-in client-root js-focus-visible sDN5V" style="/* --desktop-nav-height:60px; */">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <link rel="icon" sizes="192x192" href="images/instagramFavicon.png">
+    <!-- https://icons8.com/icons/set/favicon-instagram -->
+    <title>Login • Instagram</title>
+    <style>
+        html, body, #react-root {
+            height: 100%;
+        }
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+        a, a:visited {
+            color: #00376b;
+            text-decoration: none;
+        }
+        a:-webkit-any-link {
+            cursor: pointer;
+        }
+        body, button, input, textarea {
+            color: #262626;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+            font-size: 14px;
+            line-height: 18px;
+        }
+        button {
+            margin: 0;
+        }
+        a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        #react-root, article, div, footer, header, main, nav, section {
+            -webdit-box-align: stretch;
+            align-items: stretch;
+            border: 0 solid #000;
+            box-sizing: border-box;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            flex-shrink: 0;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        ._9eogI {
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+        }
+        .E3X2T {
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        .SCxLW {
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            -webkit-box-ordinal-group: 5;
+            order: 4;
+        }
+        .o64aR, ._3Laht {
+            /* 로그인 부분 뒤의 색상 */
+            background-color: #fafafa;
+        }
+        .rgFsT {
+            color: #262626;
+            -webkit-box-flex: 1;
+            flex-grow: 1;
+            /* 로그인 div white section */
+            -webkit-box-pack: center;
+            justify-content: center;
+            margin-top: 12px;
+            max-width: 350px;
+        }
+        .gr27e {
+            -webkit-box-align: center;
+            align-items: center;
+            background-color: #ffffff;
+            border: 1px solid #dbdbdb;
+            border-radius: 1px;
+            margin: 0 0 10px;
+            padding: 10px 0;
+        }
+        .izU2O{
+            color: #262626;
+            font-size: 14px;
+            margin: 15px;
+            text-align: center;
+        }
+        .images {
+            background-image: url(images/images.png);
+        }
+        .NXVPg {
+            margin: 22px auto 12px;
+        }
+        .Szr5J {
+            display: block;
+            overflow: hidden;
+            text-indent: 110%;
+            white-space: nowrap;
+        }
+        .coreSpriteLoggedOutWordmark {
+            background-repeat: no-repeat;
+            background-position: 0 -130px;
+            height: 51px;
+            width: 175px;
+        }
+        .EPjEi {
+            margin-bottom: 10px;
+            max-width: 350px;
+            width: 100%;
+        }
+        .HmktE {
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            flex-direction: column;
+        }
+        .qF0y9 {
+            display: flex;
+        }
+
+        .Igw0E {
+            align-content: stretch;
+        }
+        .rBNOH { 
+            -webkit-box-align: center;
+            /* 테두리 크기 센터 */
+            align-items: center;
+        }
+        .YBx95{
+            -webkit-box-pack: center;
+            /* 중간으로 보내기 */
+            justify-content: center;
+        }
+        .ybXk5 {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+        }
+        .vwCYk {
+            -webkit-box-flex: 1;
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+        .i0EQd {
+            overflow: hidden;
+        }
+        .MGky5 {
+            margin-bottom: 44px;
+        }
+        .IwRSH {
+            -webkit-box-align: stretch;
+            align-items: stretch;
+        }
+        .eGOV_ {
+            -webkit-box-pack: start;
+            justify-content: flex-start;
+        }
+        ._4EzTm {
+            -webkit-box-flex: 0px;
+            flex: 0 0 auto;
+        }
+
+        .bkEs3 {
+            margin-bottom: 8px;
+        }
+        .CovQj {
+            margin-left: 40px;
+        }
+        .jKUp7 {
+            margin-right: 40px;
+        }
+        .DhRcB {
+            margin-top: 8px;
+        }
+        .kEKum {
+            margin-top: 24px;
+        }
+        .-MzZI {
+            margin: 0 40px 6px;
+        }
+        ._9GP1n {
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-appearance: none;
+            background: #fafafa;
+            border-radius: 3px;
+            box-sizing: border-box;
+            color: #262626;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            font-size: 14px;
+            position: relative;
+            width: 100%;
+        }
+        .f0n8F {
+            display: flex;
+            height: 36px;
+            -webkit-box-flex: 1;
+            flex: 1 0 0;
+            padding: 0;
+            position: relative;
+            margin: 0;
+            min-width: 0;
+        }
+        .FATdn {
+
+        }
+        ._9nyy2 {
+            color: #8e8e8e;
+            font-size: 12px;
+            height: 36px;
+            left: 8px;
+            line-height: 36px;
+            overflow: hidden;
+            pointer-events: none;
+            /* input박스안으로 들어감 */
+            position: absolute;
+            right: 0;
+            text-overflow: ellipsis;
+            transform-origin: left;
+            /* transition: ease-out; */
+            user-select: none;
+            /* 생략되면 ...표시 */
+            white-space: nowrap;
+        }
+        .FATdn .pexuQ {
+            font-size: 12px;
+            padding: 14px 0 2px 8px!important;
+        }
+        ._2hvTZ {
+            /* input box  */
+            background: #fafafa;
+            border: 0;
+            -webkit-box-flex: 1;
+            flex: 1 0 auto;
+            margin: 0;
+            outline: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .zyHYP {
+            -webkit-appearance: none;
+        }
+        .i24fI {
+            -webkit-box-align: center;
+            align-items: center;
+            -webkit-box-flex: 0;
+            flex: 0 0 auto;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            height: 100%;
+            padding-right: 8px;
+            vertical-align: middle;
+        }
+        .sqdOP {
+            appearance: none;
+            background: 0 0;
+            box-sizing: border-box;
+            cursor: pointer;
+            font-weight: 600;
+            padding: 5px 9px;
+            text-align: center;
+            text-transform: inherit;
+            text-overflow: ellipsis;
+            user-select: none;
+            width: auto;
+        }
+        .yWX7d._8A5w5 {
+            color: #262626;
+        }
+        .yWX7d, .yWX7d:visited, a.yWX7d, a.yWX7d:visited {
+            /* show button 테두리 */
+            border: 0;
+            display: inline;
+            padding: 0;
+            position: relative;
+        }
+        ._8A5w5, a._8A5w5, a._8A5w5:visited {
+            /* show button background color */
+            background-color: transparent;
+        }
+        .L3NKy, a.L3NKy, a.L3NKy:visited {
+            border-radius: 4px;
+            color: #fff;
+            position: relative;
+        }
+        .y3zKF:not(.yWX7d), a.y3zKF:not(.yWX7d), a.y3zKF:not(.yWX7d):visited {
+            /* log in button */
+            border: 1px solid transparent;
+            background-color: #0095f6;
+        }
+        .K-1uj {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+        }
+        .Z7p_S {
+            margin: 10px 40px 18px;
+        }
+        .s311c {
+            -webkit-box-flex: 1;
+            flex-flow: 1;
+            flex-shrink: 1;
+            background-color: #dbdbdb;
+            height: 1px;
+            position: relative;
+            top: 0.45em;
+        }
+        ._0tv-g {
+            color: #8e8e8e;
+            -webkit-box-flex: 0;
+            flex-grow: 0;
+            flex-shrink: 0;
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 15px;
+            margin: 0 18px;
+            text-transform: uppercase;
+        }
+        .coreSpriteFacebookIcon {
+            background-repeat: no-repeat;
+            background-position: -414px -259px;
+            height: 16px;
+            width: 16px;            
+        }
+        .AeB99 {
+            display: inline-block;
+            margin-right: 8px;
+            position: relative;
+            top: 3px;            
+        }
+        .KPnG0 {
+            color: #385185;
+        }
+        ._2Lks6, ._2Lks6:hover, ._2Lks6:active, ._2Lks6:visited {
+            color: #00376b;
+            font-size: 12px;
+            line-height: 16px;
+            margin-top: 12px;
+            text-align: center;
+        }
+        .Rt8TI{
+            height: 40px;
+        }
+        .qyrsm {
+            font-weight: 600;
+        }
+        .gtFbE {
+            color: #0095f6;
+        }
+        .xLCgt {
+            font-size: 14px;
+            line-height: 18px;
+            margin: -3px 0 -4px;
+        }
+        ._7UhW9 {
+            font-size: 12px;
+            line-height: 16px;
+            margin: -2px 0 -3px;
+        }
+        ._7UhW9 ._7UhW9, .se6yk {
+            display: inline!important;
+            margin: 0!important;
+        }
+        .MMzan {
+            font-weight: 400;
+        }
+        ._0PwGv {
+            color: #8e8e8e;
+        }
+        .uL8Hv {
+            display: block;
+        }
+        .APQi1 {
+
+        }
+        .b_nGN {
+            color: #262626;
+            font-size: 14px;
+            line-height: 18px;
+            margin: 10px 20px 10px 20px;
+            text-align: center;
+        }
+        .iNy2T{
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            flex-direction: row;
+            -webkit-box-pack: center;
+            justify-content: center;
+            margin: 10px 0 10px 0;
+        }
+        .z1VUo {
+            margin-right: 8px;
+        }
+        /* footer */
+        ._8Rna9 {
+                /* 아래로 보내짐 */
+                -webkit-box-orient: 6;
+                order: 5;
+                padding: 0 20px;
+        }
+        .pC2e0 {
+            background-color: #fafafa;
+            padding-left: 16px;
+            padding-right: 16px;
+        }
+        .KokQV {
+            margin-bottom: 52px;
+        }
+        .YlhBV {
+            flex-wrap: wrap;
+        }
+        .JI_ht {
+            margin-right: 8px;
+        }
+        .soMvl {
+            margin-left: 8px;
+        }
+        ._22l1 {
+            margin-bottom: 12px;
+        }
+        .PIoXz {
+            font-size: 12px;
+            line-height: 16px;
+            margin: -2px 0 -3px;
+        }
+        ._49XvD {
+            margin-top: 12px;
+        }
+        .KV-D4 {
+            color: #262626;
+        }
+        ._3G4x7 {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            vertical-align: top;
+        }
+        .RFk-t {
+            color: #8e8e8e;
+        }
+        .bwz9f {
+            font-weight: 400;
+        }
+        .TQUPK {
+            -webkit-box-align: center;
+            align-items: center;
+            display: flex;
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            /* up down size  */
+            flex-direction: row;
+            -webkit-box-pack: center;
+            justify-content: center;
+        }
+        .WKY0a {
+            margin-left: 4px;
+        }
+        .hztqj {
+            cursor: pointer;
+            height: 100px;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            /* option 목록 뜸 */
+            top: 0;
+            width: 100%;
+        }
+        ._5VUwz {
+            margin-left: 16px;
+        }
+    </style>
+</head>
+<body class style data-new-gr-c-s-check-loaded="14.1043.0" data-gr-ext-installed>
+    <div id="react-root">
+        <section class="_9eogI E3X2T">
+            <div></div>
+            <main class="SCxLW o64aR" role="main">
+                <div class="qF0y9 Igw0E rBNOH YBx95 ybXk5 vwCYk MGky5 i0EQd" style="min-height: 100%;">
+                    <!-- <div>
+                        <img class="iNy2T" width="350" src="images/instagram.png" alt="">
+                    </div> -->
+                    <div class="rgFsT">
+                        <div class="gr27e">
+                            <h1 class="NXVPg Szr5J coreSpriteLoggedOutWordmark images"></h1>
+                            <div class="EPjEi">
+                                <form class="HmktE" id="loginForm" method="post">
+                                    <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm kEKum">
+                                        <div class="-MzZI">
+                                            <div class="_9GP1n">
+                                                <label class="f0n8F FATdn" for="">
+                                                    <span class="_9nyy2">Phone number, username, or email</span>
+                                                    <input aria-label="Phone number, username, or email" aria-required="true" autocapitalize="off" autocorrect="off" maxlength="75" name="username" type="text" class="_2hvTZ pexuQ zyHYP">
+                                                </label>
+                                                <div class="i24fI"></div>
+                                            </div>
+                                        </div>
+                                        <div class="-MzZI">
+                                            <!-- password글자 백그라운드 색상지정 -->
+                                            <div class="_9GP1n">
+                                                <!-- password글자 인풋박스 왼쪽으로 옮기기  -->
+                                                <label class="f0n8F FATdn">
+                                                    <!-- password글자 인풋박스 안으로 넣기 -->
+                                                    <span class="_9nyy2">Password</span>
+                                                    <input aria-label="Password" aria-required="true" autocapitalize="off" autocorrect="off" name="password" type="password" class="_2hvTZ pexuQ zyHYP">    
+                                                </label>
+                                                <div class="i24fI">
+                                                    <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm soMvl">
+                                                        <button class="sqdOP yWX7d _8A5w5" type="button">Show</button>
+                                                    </div>
+                                                </div>    
+                                            </div>
+                                        </div>
+                    
+                                        <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm bkEs3 CovQj jKUp7 DhRcB">
+                                            <button class="sqdOP L3NKy y3zKF" disabled type="submit">
+                                                <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm">Log In</div>
+                                            </button>
+                                        </div>
+                    
+                                        <div class="K-1uj Z7p_S">
+                                            <div class="s311c"></div>
+                                            <div class="_0tv-g">or</div>
+                                            <div class="s311c"></div>
+                                        </div>
+                    
+                                        <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm bkEs3 CovQj jKUp7 DhRcB">
+                                            <button class="sqdOP yWX7d y3zKF" type="button">
+                                                <span class="coreSpriteFacebookIcon AeB99 images"></span>
+                                                <span class="KPnG0">Log in with Facebook</span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <a class="_2Lks6" href=""> Forgot password?</a>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- sign up div white effect -->
+                        <div class="gr27e">
+                            <div class="_7UhW9 xLCgt MMzan _0PwGv uL8Hv">
+                                <p class="izU2O">
+                                    Don't have an account?
+                                    <a data-testid="sign-up-link" href="" tabindex="0">
+                                        <span class="_7UhW9 xLCgt qyrsm gtFbE se6yk">Sign up</span>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="APQi1">
+                            <p class="b_nGN">Get the app.</p>
+                            <div class="iNy2T">
+                                <a class="z1VUo" href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8&vt=lo">
+                                    <img src="images/appStore.png" alt="Available on the App Store" class="Rt8TI">
+                                </a>
+                                <a class="z1VUo" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DF6DF35A4-F904-44EA-BF2C-CB381B3134F0%26utm_content%3Dlo%26utm_medium%3Dbadge">
+                                    <img src="images/googlePlay.png" alt="Available on Google Play" class="Rt8TI">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </main>
+        
+            <footer class="_8Rna9 _3Laht pC2e0" role="contentinfo">
+                <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm KokQV">
+                    <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm kEKum">
+                        <div class=" qF0y9 Igw0E IwRSH YBx95 ybXk5 _4EzTm YlhBV">
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="https://about.facebook.com/meta" rel="nofollow noopener noreferrer" target="_blank">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">Meta</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="https://about.instagram.com/" rel="nofollow noopener noreferrer" target="_blank">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">About</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="https://about.instagram.com/blog/" rel="nofollow noopener noreferrer" target="_blank">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">Blog</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="/about/jobs/">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">Jobs</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="https://help.instagram.com/" rel="nofollow noopener noreferrer" target="_blank">
+                                    <div class="_7UhW9  PIoXz MMzan _0PwGv uL8Hv">Help</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="https://developers.facebook.com/docs/instagram" rel="nofollow noopener noreferrer" target="_blank">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">API</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="/legal/privacy/">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">Privacy</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="/legal/terms/">
+                                   <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">Impressum/Terms/NetzDG/UrhDaG</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="/directory/profiles/">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">Top Accounts</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="/directory/hashtags/">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">Hashtags</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht">
+                                <a href="/explore/locations/">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv ">Locations</div>
+                                </a>
+                            </div>
+                            <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _22l1 soMvl JI_ht ">
+                                <a href="/web/lite/">
+                                    <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv ">Instagram Lite</div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qF0y9 Igw0E IwRSH YBx95 ybXk5 _4EzTm _22l1 _49XvD">
+                        <div class="_7UhW9 PIoXz MMzan KV-D4 uL8Hv">
+                            <span class="_3G4x7 RFk-t bwz9f">
+                                <div class="TQUPK">
+                                    <span>English</span>
+                                    <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm WKY0a ">
+                                        <span style="display: inline-block; transform: rotate(180deg);">
+                                            <svg aria-label="Down Chevron Icon" class="_8-yf5 " color="#8e8e8e" fill="#8e8e8e" height="12" role="img" viewBox="0 0 24 24" width="12">
+                                                <path d="M21 17.502a.997.997 0 01-.707-.293L12 8.913l-8.293 8.296a1 1 0 11-1.414-1.414l9-9.004a1.03 1.03 0 011.414 0l9 9.004A1 1 0 0121 17.502z"></path>
+                                            </svg>
+                                        </span>
+                                    </div>
+                                </div>
+                                <select aria-label="Switch Display Language" class="hztqj">
+                                    <option value="af">Afrikaans</option>
+                                    <option value="cs">Čeština</option>
+                                    <option value="da">Dansk</option>
+                                    <option value="de">Deutsch</option>
+                                    <option value="el">Ελληνικά</option>
+                                    <option value="en">English</option>
+                                    <option value="en-gb">English (UK)</option>
+                                    <option value="es">Español (España)</option>
+                                    <option value="es-la">Español</option>
+                                    <option value="fi">Suomi</option>
+                                    <option value="fr">Français</option>
+                                    <option value="id">Bahasa Indonesia</option>
+                                    <option value="it">Italiano</option>
+                                    <option value="ja">日本語</option>
+                                    <option value="ko">한국어</option>
+                                    <option value="ms">Bahasa Melayu</option>
+                                    <option value="nb">Norsk</option>
+                                    <option value="nl">Nederlands</option>
+                                    <option value="pl">Polski</option>
+                                    <option value="pt-br">Português (Brasil)</option>
+                                    <option value="pt">Português (Portugal)</option>
+                                    <option value="ru">Русский</option>
+                                    <option value="sv">Svenska</option>
+                                    <option value="th">ภาษาไทย</option>
+                                    <option value="tl">Filipino</option>
+                                    <option value="tr">Türkçe</option>
+                                    <option value="zh-cn">中文(简体)</option>
+                                    <option value="zh-tw">中文(台灣)</option>
+                                    <option value="bn">বাংলা</option>
+                                    <option value="gu">ગુજરાતી</option>
+                                    <option value="hi">हिन्दी</option>
+                                    <option value="hr">Hrvatski</option>
+                                    <option value="hu">Magyar</option>
+                                    <option value="kn">ಕನ್ನಡ</option>
+                                    <option value="ml">മലയാളം</option>
+                                    <option value="mr">मराठी</option>
+                                    <option value="ne">नेपाली</option>
+                                    <option value="pa">ਪੰਜਾਬੀ</option>
+                                    <option value="si">සිංහල</option>
+                                    <option value="sk">Slovenčina</option>
+                                    <option value="ta">தமிழ்</option>
+                                    <option value="te">తెలుగు</option>
+                                    <option value="vi">Tiếng Việt</option>
+                                    <option value="zh-hk">中文(香港)</option>
+                                    <option value="bg">Български</option>
+                                    <option value="fr-ca">Français (Canada)</option>
+                                    <option value="ro">Română</option>
+                                    <option value="sr">Српски</option>
+                                    <option value="uk">Українська</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="qF0y9 Igw0E IwRSH eGOV_ _4EzTm _5VUwz">
+                            <div class="_7UhW9 PIoXz MMzan _0PwGv uL8Hv">© 2022 Instagram from Meta</div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </footer>
+        </section>
+    
+    </div>
+    
+</body>
+</html>
