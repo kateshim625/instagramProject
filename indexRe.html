@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" sizes="192x192" href="images/instagramFavicon.png">
+
+    <title>Instagram</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a, a:visited {
+            color: #00376b;
+            text-decoration: none;
+        }
+        .container {
+            background-color: #fafafa;
+        }
+        .images {
+            background-image: url(images/images.png);
+        }
+        .logoMargin {
+            margin: 22px auto 12px;
+        }
+        .logoImage { border: 1 solid black;
+            background-repeat: no-repeat;
+            background-position: 0 -130px;
+            height: 51px;
+            width: 175px;
+        }
+        .logo { 
+            display: block;
+            overflow: hidden;
+            text-indent: 110%;
+            white-space: nowrap;
+        }
+        .mainPic {
+            align-self: center;
+            background-repeat: no-repeat;
+            background-image: url(images/instagramMainFrame.png);
+            background-position: center;
+            background-size: 454px 618px;
+            flex-basis: 454px;
+            height: 618px;
+            margin-left: -35px;
+            margin-right: -15px;
+        }
+        .mainDiv {
+            float: left;
+        }
+        .pics {
+            margin: 99px 0 0 151px;
+            position: relative;
+        }
+        .loginDiv {
+            align-items: center;
+        }
+        /* .RP4i1 {
+            height: 427px;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            visibility: hidden;
+            width: 240px;
+        } */
+        .facebookLogIn {
+            display: inline-block;
+            margin-right: 8px;
+            position: relative;
+            top: 3px;
+        }
+        .facebookImage {
+            background-repeat: no-repeat;
+            background-position: -414px -259px;
+            height: 16px;
+            width: 16px;
+        }
+        .getApp {
+            flex-direction: row;
+            justify-content: center;
+            margin: 10px 0 10px 0;
+        }
+        .getAppLink {
+            margin-right: 8px;
+        }
+        .getAppImg {
+            height: 40px;
+        }
+        .formLayout {
+            align-items: center;
+            background-color: #fff;
+            border: 1 solid #dbdbdb;
+            border-radius: 1px;
+            margin: 0 0 10px;
+            padding: 10px 0;
+        }
+        .loginButton {
+            margin-top: 8px;
+            margin-right: 40px;
+            margin-left: 40px;
+            margin-bottom: 8px;
+            flex: 0 0 auto;
+            justify-content: flex-start;
+            align-items: stretch;
+            align-content: stretch;
+            display: flex;
+        }
+        .links {
+            float: left;
+            padding: 0 8px;
+            font-size: 12px;
+        }
+        .linkSection {
+            margin: 0px 0 52px;
+
+        }
+        .endSection {
+            float: left;
+
+        }
+        footer {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="">
+
+
+                <!-- login join form -->
+                <div class="">
+                    <form action="" method="post">
+                        <!-- main instagram phone picture -->
+                        <div class="mainPic mainDiv">
+                            <div class="pics">
+                                <img class="RP4i1" src="images/1.jpg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="formLayout">
+                            <!-- logo -->
+                            <div>
+                                <h1 class="logo logoMargin logoImage images">instagram logo</h1>
+                            </div>
+                            <!-- main login -->
+                            <div> 
+                                <!-- id and pw -->
+                                <div>
+                                    <div>
+                                        <label for="">Phone number, username, or email</label>
+                                        <input type="text">
+                                    </div>
+                                    <div>
+                                        <label for="">Password</label>
+                                        <input type="password">
+                                    </div>
+                                </div>
+                                <!-- login button -->
+                                <div class="loginButton">
+                                    <button type="button">Log In</button>
+                                </div>
+                                <!-- or -->
+                                <div>
+                                    <span>--</span>
+                                    <span>OR</span>
+                                    <span>--</span>
+                                </div>
+                                <!-- login With FB -->
+                                <div> 
+                                                                                        <!-- 버튼 태그? 링크태그? 뭐가 좋은지 ? -->
+                                    <div>
+                                        <button type="button ">
+                                            <span class="facebookLogIn facebookImage images"></span>
+                                            <span>Log in with Facebook</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- forgot pw -->
+                                <div>
+                                    <span><a href="#">Forgot password?</a></span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- main join -->
+                        <div class="formLayout">
+                            <span>Don't have an account?</span>
+                            <span><a href="">Sign up</a></span>
+                        </div>
+                        <!-- get the app -->
+                        <div>
+                            <p>Get the app</p>
+                            <div class="getApp">
+                                <a class="getAppLink" href="https://itunes.apple.com/app/instagram/id389801252?pt=428156&ct=igweb.loginPage.badge&mt=8&vt=lo">
+                                    <img src="images/appStore.png" class="getAppImg" alt="Available on the App Store">
+                                </a>
+                                
+                                <a class="getAppLink" href="https://play.google.com/store/apps/details?id=com.instagram.android&referrer=utm_source%3Dinstagramweb%26utm_campaign%3DloginPage%26ig_mid%3DF6DF35A4-F904-44EA-BF2C-CB381B3134F0%26utm_content%3Dlo%26utm_medium%3Dbadge">
+                                    <img src="images/googlePlay.png" class="getAppImg" alt="Available on Google Play">
+                                </a>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer class="container">
+        <div class="">
+            <div class="">
+                                                <!-- float left를 div안에 줬는데 아래에 있는 English부분의 div도 float left가 적용이 되는데 이유가 궁금합니다 ㅜ -->
+                <div class=""><a href="#"><div class="links">Meta</div></a></div>
+                <div class=""><a href="#"><div class="links">About</div></a></div>
+                <div class=""><a href="#"><div class="links">Blog</div></a></div>
+                <div class=""><a href="#"><div class="links">Jobs</div></a></div>
+                <div class=""><a href="#"><div class="links">Help</div></a></div>
+                <div class=""><a href="#"><div class="links">API</div></a></div>
+                <div class=""><a href="#"><div class="links">Privacy</div></a></div>
+                <div class=""><a href="#"><div class="links">Impressum/Terms/NetzDG/UrhDaG</div></a></div>
+                <div class=""><a href="#"><div class="links">Top Accounts</div></a></div>
+                <div class=""><a href="#"><div class="links">Hashtags</div></a></div>
+                <div class=""><a href="#"><div class="links">Locations</div></a></div>
+                <div class=""><a href="#"><div class="links">Instagram Lite</div></a></div>
+                <div class=""><a href="#"><div class="links">Beauty</div></a></div>
+                <div class=""><a href="#"><div class="links">Dance</div></a></div>
+                <div class=""><a href="#"><div class="links">Fitness</div></a></div>
+                <div class=""><a href="#"><div class="links">Food & Drink</div></a></div>
+                <div class=""><a href="#"><div class="links">Home & Garden</div></a></div>
+                <div class=""><a href="#"><div class="links">Music</div></a></div>
+                <div class=""><a href="#"><div class="links">Visual Arts</div></a></div>
+            </div>
+        </div>
+
+        <div class="">
+            <div>
+                <div class="">
+                    <span>
+                        English
+                    </span>
+                    <span>
+                        © 2022 Instagram from Meta
+                    </span>
+                </div>
+
+                <select name="" id="">
+                    <option value="af">Afrikaans</option>
+                    <option value="cs">Čeština</option>
+                    <option value="da">Dansk</option>
+                    <option value="de">Deutsch</option>
+                    <option value="el">Ελληνικά</option>
+                    <option value="en">English</option>
+                    <option value="en-gb">English (UK)</option>
+                    <option value="es">Español (España)</option>
+                    <option value="es-la">Español</option>
+                    <option value="fi">Suomi</option>
+                    <option value="fr">Français</option>
+                    <option value="id">Bahasa Indonesia</option>
+                    <option value="it">Italiano</option>
+                    <option value="ja">日本語</option>
+                    <option value="ko">한국어</option>
+                    <option value="ms">Bahasa Melayu</option>
+                    <option value="nb">Norsk</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="pl">Polski</option>
+                    <option value="pt-br">Português (Brasil)</option>
+                    <option value="pt">Português (Portugal)</option>
+                    <option value="ru">Русский</option>
+                    <option value="sv">Svenska</option>
+                    <option value="th">ภาษาไทย</option>
+                    <option value="tl">Filipino</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="zh-cn">中文(简体)</option>
+                    <option value="zh-tw">中文(台灣)</option>
+                    <option value="bn">বাংলা</option>
+                    <option value="gu">ગુજરાતી</option>
+                    <option value="hi">हिन्दी</option>
+                    <option value="hr">Hrvatski</option>
+                    <option value="hu">Magyar</option>
+                    <option value="kn">ಕನ್ನಡ</option>
+                    <option value="ml">മലയാളം</option>
+                    <option value="mr">मराठी</option>
+                    <option value="ne">नेपाली</option>
+                    <option value="pa">ਪੰਜਾਬੀ</option>
+                    <option value="si">සිංහල</option>
+                    <option value="sk">Slovenčina</option>
+                    <option value="ta">தமிழ்</option>
+                    <option value="te">తెలుగు</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="zh-hk">中文(香港)</option>
+                    <option value="bg">Български</option>
+                    <option value="fr-ca">Français (Canada)</option>
+                    <option value="ro">Română</option>
+                    <option value="sr">Српски</option>
+                    <option value="uk">Українська</option>
+                </select>
+            </div>
+
+        </div>
+    </footer>
+</body>
+</html>
