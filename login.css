@@ -25,6 +25,9 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     font: inherit;
     vertical-align: baseline;
 }
+select:not(:-internal-list-box) {
+    overflow: visible !important;
+}
 #container, article, div, footer, header, main, nav, section {
     align-items: stretch;
     border: 0 solid #000;
@@ -431,15 +434,9 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
         top: 0;
         visibility: hidden;
         width: 240px;
-    }
-    
-    .movePics {
-        transition: opacity 1.5s ease-in;
-        z-index: 2;
-    }
-    /* to show the moveable pics */
-    .movePics, .moveNextPics {
+        /* to show the moveable pics */
         opacity: 1;
         visibility: visible;
     }
+ 
 }
