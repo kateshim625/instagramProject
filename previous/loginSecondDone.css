@@ -56,6 +56,12 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 }
 
 /* section ----------------- */
+/* ._9eogI {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+} */
+
 /* fill the entire page  */
 .sectionEntirePart {
     min-height: 100vh;
@@ -75,17 +81,38 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 
 
 /* =========== after main divs =========== */
+
+/* .qF0y9 {
+    display: flex;
+} */
+/* .Igw0E {
+    align-content: stretch;
+} */
+
 /* login section center range */
-.mainCenter{
+.YBx95{
     justify-content: center;
     flex-direction: row;
 }
+
+/* .IwRSH {
+    align-items: stretch;
+} */
+/* .eGOV_ {
+    justify-content: flex-start;
+} */
+/* ._4EzTm {
+    flex: 0 0 auto;
+} */
+
 /* main & footer top ajustment */
 .mainFootTopAjust {
     margin-top: 24px;
 }
 
+
 /* article first div ----------------- */
+
 /* border size center */
 .borderCenter { 
     align-items: center;
@@ -93,6 +120,10 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     min-width: 0;
     margin-bottom: 44px;
 }
+/* .i0EQd {
+    overflow: hidden;
+} */
+
 
 /* login & join div ----------------- */
 /* login div position section */
@@ -116,6 +147,12 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .logoSize {
     margin: 22px auto 12px;
 }
+/* .Szr5J {
+    display: block;
+    overflow: hidden;
+    text-indent: 110%;
+    white-space: nowrap;
+} */
 /* instagram logo bg picture adjustment */
 .instagramLogoBgPosition {
     background-repeat: no-repeat;
@@ -134,6 +171,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     display: flex;
     flex-direction: column;
 }
+
 
 /* id & pw input ----------------- */
 /* id & pw size ajustment */
@@ -197,6 +235,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     /* border: 1 solid black; */
 }
 
+
 /* show & login in button ----------------- */
 /* pw show or hidden */
 .pwShow {
@@ -208,7 +247,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     vertical-align: middle;
 }
 /* button ajustment */
-.buttonAjust {
+.sqdOP {
     appearance: none;
     background: 0 0;
     box-sizing: border-box;
@@ -221,21 +260,35 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     user-select: none;
     width: auto;
 }
-/* show & login with fb button border */
-.showLoginFbButton, .showLoginFbButton:visited, a.showLoginFbButton, a.showLoginFbButton:visited {
+/* button text color */
+/* .yWX7d._8A5w5 {
+    color: #262626;
+} */
+
+/* .yWX7d._8A5w5, a.yWX7d._8A5w5, a.yWX7d._8A5w5:visited {
+    color: #262626;
+} */
+
+/* show button border */
+.yWX7d, .yWX7d:visited, a.yWX7d, a.yWX7d:visited {
     border: 0;
     display: inline;
     padding: 0;
     position: relative;
 }
+/* show button background color */
+/* ._8A5w5, a._8A5w5, a._8A5w5:visited {
+    background-color: transparent;
+} */
+
 /* login button font */
-.loginButtonFont, a.loginButtonFont, a.loginButtonFont:visited {
+.L3NKy, a.L3NKy, a.L3NKy:visited {
     border-radius: 4px;
     color: #fff;
     position: relative;
 }
 /* log in button */
-.loginButton:not(.showLoginFbButton), a.loginButton:not(.showLoginFbButton), a.loginButton:not(.showLoginFbButton):visited {
+.y3zKF:not(.yWX7d), a.y3zKF:not(.yWX7d), a.y3zKF:not(.yWX7d):visited {
     border: 1px solid transparent;
     background-color: #0095f6;
 }
@@ -244,12 +297,16 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     margin: 8px 40px;
 }
 
+
 /* or ----------------- */
 /* or line ajustment */
 .orLine {
     flex-direction: row;
     margin: 10px 40px 18px;
 }
+/* .Z7p_S {
+    margin: 10px 40px 18px;
+} */
 /* or lines */
 .bothSideLines {
     background-color: #dbdbdb;
@@ -269,6 +326,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     margin: 0 18px;
     text-transform: uppercase;
 }
+
 
 /* login with facebook ----------------- */
 /* login with fb position  */
@@ -301,11 +359,32 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     text-align: center;
 }
 
+
+
 /* sign up ----------------- */
+
+/* ._7UhW9 {
+    font-size: 12px;
+    line-height: 16px;
+    margin: -2px 0 -3px;
+} */
+/* .xLCgt {
+    font-size: 14px;
+    line-height: 18px;
+    margin: -3px 0 -4px;
+} */
+/* .MMzan {
+    font-weight: 400;
+} */
+
 /* font color */
-.fontColor {
+._0PwGv {
     color: #8e8e8e;
 }
+/* .uL8Hv {
+    display: block;
+} */
+
 /* sign up border size */
 .signUpBorderSize{
     color: #262626;
@@ -317,7 +396,14 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
 .signFont {
     font-weight: 600;
     color: #0095f6;
+
 }
+
+/* ._7UhW9 ._7UhW9, .se6yk {
+    display: inline!important;
+    margin: 0!important;
+} */
+
 
 /* get app ----------------- */
 /* get app p position */
@@ -349,8 +435,13 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     order: 5;
     padding: 0 20px;
 }
+/* .pC2e0 {
+    background-color: #fafafa;
+    padding-left: 16px;
+    padding-right: 16px;
+} */
 /* footer bottom  */
-.footerButtom {
+.KokQV {
     margin-bottom: 52px;
 }
 /* Auto alignment when resizing */
@@ -370,15 +461,30 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     margin: -2px 0 -3px;
 }
 
+
 /* footer Language & c name ----------------- */
 /* Language & c  */
 .langAcomapny {
     margin-top: 12px;
 }
+/* .KV-D4 {
+    color: #262626;
+} */
+/* ._3G4x7 {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+} */
+
 /* language font color */
 .languageFontColor {
     color: #8e8e8e;
 }
+/* .bwz9f {
+    font-weight: 400;
+} */
+
 /* more Lanague position */
 .moreLanugePosition {
     align-items: center;
@@ -386,6 +492,10 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     flex-direction: row;
     justify-content: center;
 }
+/* .WKY0a {
+    margin-left: 4px;
+} */
+
  /* option list show */
 .showOptionList {
     cursor: pointer;
