@@ -169,27 +169,36 @@ select:not(:-internal-list-box) {
 }
 /* id & pw span ajustment */
 .idPwSpanAjust {
+    display: none;
     color: #8e8e8e;
-    font-size: 12px;
-    height: 36px;
-    left: 8px;
-    line-height: 36px;
-    overflow: hidden;
-    pointer-events: none;
-    /* span text into input box */
+    font-size: 11px;
+    left: 8px;    
     position: absolute;
-    right: 0;
+    /* line-height: 36px; */
+
+    /* height: 36px;
+     
+    overflow: hidden;
+    pointer-events: none; */
+    /* span text into input box */
+    /* right: 0;
     text-overflow: ellipsis;
-    transform-origin: left;
+    transform-origin: left; */
     /* transition: ease-out; */
-    user-select: none;
+    /* user-select: none; */
     /* 생략되면 ...표시 */
-    white-space: nowrap;
+    /* white-space: nowrap; */
 }
+
+#idPwSpanAjustTyped { 
+    display: none;
+    line-height: 21px; 
+}
+
 /* id & pw input box ajustment */
 .idPwLabelAjust .pexuQ {
-    font-size: 12px;
-    padding: 14px 0 2px 8px!important;
+    font-size: 13px;
+    padding: 8px 0 0px 8px!important;
     background: #fafafa;
     border: 0;
     flex: 1 0 auto;
@@ -199,6 +208,11 @@ select:not(:-internal-list-box) {
     text-overflow: ellipsis;
     border: 1px solid #dbdbdb;
 }
+/* 
+.idPwTypeBorder {
+    display: none;
+    border: 1px solid #262626!important;
+} */
 
 /* show & login in button ----------------- */
 /* pw show or hidden */
@@ -420,7 +434,7 @@ select:not(:-internal-list-box) {
 #key {
     width: 220px;
     border: 1px solid #dbdbdb;
-    padding: 14px 36px 3px 10px!important;
+    padding: 9px 36px 3px 8px!important;
 }
 /* login Show & Hide */
 #keyShow {
