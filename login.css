@@ -477,7 +477,6 @@ select:not(:-internal-list-box) {
         60% { background-image: url("images/3.jpg"); }
         80% { background-image: url("images/5.jpg"); }	
        }
-
       /* http://css3.bradshawenterprises.com/cfimg/ */
       /* https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions */
 }

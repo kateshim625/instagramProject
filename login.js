@@ -7,7 +7,6 @@ const loginIncorrect = document.querySelector(".incorrectInfo");
 const userID = "kate";
 const userPassword = "0987654321";
 
-
 //button color active id ----------------------------
 loginID.addEventListener("input", (e) => {
   let inputValue = e.target.value;
@@ -19,7 +18,6 @@ loginID.addEventListener("input", (e) => {
     loginButton.style.opacity = "0.3";
   }
 });
-
 
 //when type into input show up ----------------------------
 loginPassword.addEventListener("input", (e) => {
@@ -64,8 +62,6 @@ showPassword.addEventListener("click", (e) => {
       loginIncorrect.style.display = "block";
     }
   });
-  
-
 
 // jQuery Version ---------------------------------
 // $("#key").on("keyup", function(event) {
