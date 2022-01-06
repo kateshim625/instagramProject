@@ -3,16 +3,25 @@ const showPassword = document.querySelector("#keyShow");
 const loginPassword = document.getElementById("key");
 const loginButton = document.getElementById("loginButton");
 const loginIncorrect = document.querySelector(".incorrectInfo");
-const loginPlaceHolder = document.querySelector(".idPwSpanAjustTyped");
 const loginInputBox = document.querySelector(".idPwSpanAjust");
-const loginInputBorder = document.querySelector(".pexuQ");
+const loginPwInputBox = document.querySelector(".pwSpanAjust");
 
+const loginInputBorder = document.getElementById('loginForm');
+const pwInputBox = document.querySelector(".idPwSpanAjust");
 
-
-// const loginBorder = document.querySelector(".pexuQ");
 
 const userID = "insta_clone";
-const userPassword = "12345";
+const userPassword = "123456";
+
+// when input box has focus in or out the border color change
+loginInputBorder.addEventListener("focusin", (e) => {
+  e.target.style.border = "1px solid #262626";
+})
+loginInputBorder.addEventListener("focusout", (e) => {
+  e.target.style.border = "1px solid #dbdbdb";
+})
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Element/focusout_event#specifications
 
 //button color active id ----------------------------
 loginID.addEventListener("input", (e) => {
@@ -20,45 +29,50 @@ loginID.addEventListener("input", (e) => {
   // when type id button color active
   if (inputValue.length > 0 && loginPassword.value.length > 5) {
     loginButton.style.opacity = "1";
-
+    loginButton.disabled = false;
+    loginButton.style.cursor = "pointer";
+    return
   }
   if (inputValue.length === 0 || loginPassword.value.length < 6) {
     loginButton.style.opacity = "0.3";
+    loginButton.disabled = true;
+    loginButton.style.cursor = "default";
   }
-
-  // when type into input show up
-  if(inputValue.length === 0){
-    loginPlaceHolder.style.display = "none"
-    loginInputBorder.style.border = "1px solid #dbdbdb"
+  // when type into input placeHolder position change
+  if(inputValue.length > 0) {
+    loginInputBox.classList.add('--focusStyle');
   } else {
-    loginPlaceHolder.style.display = "block"
-    loginInputBorder.style.border = "1px solid #262626"
+    loginInputBox.classList.remove('--focusStyle');
   }
 
 });
-//이벤트리스 써서 .. 
+
 //when type into input show up ----------------------------
 loginPassword.addEventListener("input", (e) => {
     let passwordValue = e.target.value;
     //when type pw button color active
     if (loginID.value.length > 0 && passwordValue.length > 5) {
       loginButton.style.opacity = "1";
+      loginButton.disabled = false;
+      loginButton.style.cursor = "pointer";
+      return
     }
     if (loginID.value.length === 0 || passwordValue.length < 6) {
       loginButton.style.opacity = "0.3";
+      loginButton.disabled = true;
+      loginButton.style.cursor = "default";
+    }
+    // when type into input placeHolder position change
+    if(passwordValue.length > 0) {
+      loginPwInputBox.classList.add('--pwFocusStyle');
+    } else {
+      loginPwInputBox.classList.remove('--pwFocusStyle');
     }
     // when type into input show up
-    // passwordValue.length === 0
-    //   ? (showPassword.style.display = "none")
-    //   : (showPassword.style.display = "block");
+    passwordValue.length === 0
+      ? (showPassword.style.display = "none")
+      : (showPassword.style.display = "block");
 
-    if(passwordValue.length === 0) {
-      showPassword.style.display = "none"
-      loginPlaceHolder.style.display = "none"
-    } else {
-      showPassword.style.display = "block"
-      loginPlaceHolder.style.display = "block"
-    }
   });
 
 // pw show & hide -----------------------------------------
@@ -112,8 +126,6 @@ showPassword.addEventListener("click", (e) => {
 //       $($(this)).text("Show");
 //     }
 //   });
-  
-
 
 
 // // https://alikong.tistory.com/25

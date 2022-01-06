@@ -37,8 +37,8 @@
                                             <div class="idPwSize">
                                                 <div class="idPwInputAjust">
                                                     <label class="idPwLabelAjust" for="userId">
-                                                        <span class="idPwSpanAjust idPwSpanAjustTyped">Phone number, username, or email</span>
-                                                        <input aria-required="true" autocomplete="false" autocapitalize="off" autocorrect="off" maxlength="75" id="userId" name="username" type="text" class="pexuQ">
+                                                        <span class="idPwSpanAjust">Phone number, username, or email</span>
+                                                        <input id="userId" name="username" type="text" class="pexuQ">
                                                     </label>
                                                     <!-- <div class="pwShow"></div> -->
                                                 </div>
@@ -49,8 +49,8 @@
                                                     <!-- password글자 인풋박스 왼쪽으로 옮기기  -->
                                                     <label class="idPwLabelAjust" for="key">
                                                         <!-- password글자 인풋박스 안으로 넣기 -->
-                                                        <span class="idPwSpanAjust idPwSpanAjustTyped">Password</span>
-                                                        <input placeholder="Password" aria-required="true" autocomplete="false" autocapitalize="off" autocorrect="off" name="password" type="password" id="key" class="pexuQ">    
+                                                        <span class="pwSpanAjust">Password</span>
+                                                        <input id="key" name="password" type="password" class="pexuQ">    
                                                     </label>
                                                     <div class="pwShow">
                                                         <div id="keyShow">Show</div>
@@ -68,7 +68,7 @@
                                             비번을 입력을 시작하면 버튼이 나옵니다. -->
 
                                             <div class="loginAndFbLoginPosition">
-                                                <button class="buttonAjust loginButtonFont" id="loginButton" type="submit">
+                                                <button class="buttonAjust loginButtonFont" id="loginButton" type="submit" disabled>
                                                     <div class="">Log In</div>
                                                 </button>
                                             </div>
