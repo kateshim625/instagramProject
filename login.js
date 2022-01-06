@@ -5,9 +5,7 @@ const loginButton = document.getElementById("loginButton");
 const loginIncorrect = document.querySelector(".incorrectInfo");
 const loginInputBox = document.querySelector(".idPwSpanAjust");
 const loginPwInputBox = document.querySelector(".pwSpanAjust");
-
 const loginInputBorder = document.getElementById('loginForm');
-const pwInputBox = document.querySelector(".idPwSpanAjust");
 
 
 const userID = "insta_clone";
@@ -30,21 +28,23 @@ loginID.addEventListener("input", (e) => {
   if (inputValue.length > 0 && loginPassword.value.length > 5) {
     loginButton.style.opacity = "1";
     loginButton.disabled = false;
+    loginButton.classList.add('buttonActive'); //button active romoved
     loginButton.style.cursor = "pointer";
-    return
   }
   if (inputValue.length === 0 || loginPassword.value.length < 6) {
     loginButton.style.opacity = "0.3";
     loginButton.disabled = true;
+    loginButton.classList.remove('buttonActive'); //button active romoved
     loginButton.style.cursor = "default";
   }
   // when type into input placeHolder position change
-  if(inputValue.length > 0) {
-    loginInputBox.classList.add('--focusStyle');
+  if(inputValue && inputValue.length > 0) {
+    loginInputBox.classList.remove('idPwSpanAjust'); 
+    loginInputBox.classList.add('idFocusStyle');
   } else {
-    loginInputBox.classList.remove('--focusStyle');
+    loginInputBox.classList.add('idPwSpanAjust');
+    loginInputBox.classList.remove('idFocusStyle');
   }
-
 });
 
 //when type into input show up ----------------------------
@@ -54,19 +54,26 @@ loginPassword.addEventListener("input", (e) => {
     if (loginID.value.length > 0 && passwordValue.length > 5) {
       loginButton.style.opacity = "1";
       loginButton.disabled = false;
+      loginButton.classList.add('buttonActive'); //button active romoved
       loginButton.style.cursor = "pointer";
-      return
+      //이부분에서 적용이안되서 추가로 add하니 적용됨 ---------------------
+      loginInputBox.classList.add('idFocusStyle'); // when type into input placeHolder position change
     }
     if (loginID.value.length === 0 || passwordValue.length < 6) {
       loginButton.style.opacity = "0.3";
       loginButton.disabled = true;
+      loginButton.classList.remove('buttonActive'); //button active romoved
       loginButton.style.cursor = "default";
     }
     // when type into input placeHolder position change
-    if(passwordValue.length > 0) {
-      loginPwInputBox.classList.add('--pwFocusStyle');
+    if(passwordValue && passwordValue.length > 0) {
+      loginPwInputBox.classList.remove('pwSpanAjust');
+      loginPwInputBox.classList.add('pwFocusStyle');
+
     } else {
-      loginPwInputBox.classList.remove('--pwFocusStyle');
+      loginPwInputBox.classList.add('pwSpanAjust');
+      loginPwInputBox.classList.remove('pwFocusStyle');
+
     }
     // when type into input show up
     passwordValue.length === 0

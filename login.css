@@ -175,6 +175,14 @@ select:not(:-internal-list-box) {
     position: absolute;
     top: 12px;
 }
+.idFocusStyle {
+    color: #8e8e8e;
+    font-size: 10px;
+    left: 8px;  
+    position: absolute;
+    padding-bottom: 5px;
+    top: 0;
+}
 
 .pwSpanAjust {
     color: #8e8e8e;
@@ -183,26 +191,7 @@ select:not(:-internal-list-box) {
     position: absolute;
     top: 12px;
 }
-
-.idPwSpanAjust.--focusStyle {
-    color: #8e8e8e;
-    font-size: 10px;
-    left: 8px;  
-    position: absolute;
-    padding-bottom: 5px;
-    top: 0;
-}
-
-.pwSpanAjust.--pwFocusStyle {
-    color: #8e8e8e;
-    font-size: 10px;
-    left: 8px;  
-    position: absolute;
-    padding-bottom: 5px;
-    top: 0;
-}
-
-.focusStyle.--pwFocusStyle {
+.pwFocusStyle {
     color: #8e8e8e;
     font-size: 10px;
     left: 8px;  
@@ -275,7 +264,7 @@ select:not(:-internal-list-box) {
     opacity: 0.3;
 }
 
-#loginButton:active {
+.buttonActive:active {
     opacity: 0.6!important;
 }
 /* https://www.w3schools.com/css/css3_buttons.asp */
