@@ -430,7 +430,7 @@ select:not(:-internal-list-box) {
  /* option list show */
 .showOptionList {
     cursor: pointer;
-    height: 100px;
+    /* sheight: 100px; */
     left: 0;
     opacity: 0;
     position: absolute;
