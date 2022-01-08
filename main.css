@@ -2,9 +2,236 @@
     box-sizing: border-box;
 }
 
+div#container {
+    background-color: #efefef;
+}
+nav {
+    display: inline-block;
+    border-bottom: 1 solid #dbdbdb;
+}
+ul {
+    list-style: none;
+    display: flex;
+}    
 header {
     background-color: #fff;
-    height: 60px;
     width: 100%;
-    float: left;
+    position: fixed;
+    border-bottom: 2px solid #dbdbdb;
 }
+
+footer {
+    clear: both;
+}
+footer div{
+    color: #c7c7c7;
+    margin: 0 0 16px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+}
+.main-nav {
+    max-width: 975px;
+    padding: 14px 20px;
+    width: 100%;
+    background: #fff;
+}
+li.logoLi {
+    width: 334px;
+    text-align: left;
+}
+li.searchLi {
+    align-items: center;
+    width: 268px;
+}
+li.iconsLi {
+    width: 334px;
+}
+div.iconsDiv {
+    display: flex;
+    align-items: center;
+    font-size: 22px; /* 아이콘 싸이즈 */
+}
+
+li.iconsLi span {
+    height: 24px;
+    width: 24px;
+    text-align: center;
+}
+.myPic {
+    width: 24px;
+    height: 24px;
+    /* https://gofnrk.tistory.com/28 */
+    border-radius: 70%;
+}
+
+
+.mainTop {
+    padding-top: 90px;
+}
+.friendStroies {
+    position: relative;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    margin-top: 0;
+    padding: 16px 0;
+    width: 614px;
+    height: 119px;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    display: flex;
+}
+
+.picMoveBefore {
+    position: absolute;
+    background-image: url(/images/images.png);
+    background-repeat: no-repeat;
+    background-position: -130px -99px;
+    height: 33px;
+    width: 33px;
+    text-indent: -9999px;
+    margin-left: 10px;
+}
+.picMoveNext {
+    position: absolute;
+    background-image: url(/images/images.png);
+    background-repeat: no-repeat;
+    background-position: -162px -99px;
+    height: 33px;
+    width: 33px;
+    text-indent: -9999px;
+}
+.before {
+    position: absolute;
+    bottom: 72px;
+}
+.next {
+    position: absolute;
+    right: 40px;
+    bottom: 72px;
+}
+.friendStory {
+    padding: 3px 0;
+    height: 83px;
+    width: 80px;
+    margin-left: 10px;
+}
+.friendNamePic {
+    width: 78px;
+    height: 122px;
+    padding: 0 4px;
+}
+/* friend's story circle boarder */
+.storyPicBorder {
+    background-image: url(/images/mainImages/pictureBorder.png);
+    background-repeat: no-repeat;
+    background-size: 64px;
+    position: absolute;
+    /* top: 108px;
+    left: 3px; */
+    width: 66px; 
+    height: 66px;
+
+}
+.storyPicSwich {
+    width: 60px;
+    height: 60px;
+    /* https://gofnrk.tistory.com/28 */
+    border-radius: 70%;
+    overflow: hidden;
+    margin: 1px 0 5px 2px;
+}
+
+.peoplePost {
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    width: 614px;
+    height: 907px;
+}
+
+.postPic {
+    height: 32px;
+    width: 32px;
+    border-radius: 70%;
+    margin-right: 10px;
+}
+
+.userNamePhoto {
+    height: 70px;
+    /* padding: 0; */
+    display: flex;
+    
+
+}
+.friendInfo { 
+    padding: 14px 4px 14px 16px;
+    font-size: 12px;
+    display: flex;
+}
+.postPicBorder {
+    background-image: url(/images/mainImages/pictureBorderSmall.png);
+    background-repeat: no-repeat;
+    background-size: 35px;
+    position: absolute;
+    width: 34px; 
+    height: 34px;
+    display: flex;
+}
+
+.mainPics {
+    /* width: 600px; */
+}
+.picSize {
+    width: 612px;
+} 
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: default;
+    height: 5px;
+    width: 5px;
+    /* background-color: #a8a8a8; */
+    background-color: #0095f6; 
+    display: inline-block;
+  }
+  /* https://www.w3schools.com/howto/howto_js_slideshow.asp */
+.postsReaction {
+    display: flex;
+    
+}
+.postsReaction span {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+}
+.postActions {
+    display: flex;
+}
+.bottomPost {
+    padding: 8px;
+}
+.bottomPost div {
+    padding: 2px;
+    font-size: 12px;
+}
+.whoLiked {
+      width: 20px;
+      height: 20px;
+      border-radius: 70%;
+}
+.mainDives {
+    display: flex;
+    margin: 0 46px;
+}
+.sideMargin {
+    margin-left: 20px;
+}
+.links:not(:last-of-type)::after {
+    content: '\00B7';
+    margin: 0 0.25em 0 0.25em;
+}
+/* nav one line : https://www.daleseo.com/css-align-right/ */

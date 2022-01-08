@@ -19,152 +19,277 @@
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
+    <link href="main.css?ver=1" rel="stylesheet">
+    <link href="reset.css?ver=1" rel="stylesheet"> <!-- https://pbj0812.tistory.com/229 -->
 
     <title>Instagram</title>
 </head>
 <body>
-    <div>
-        <header>
-            <!-- logo -->
-            <div>
-                <h1><img src="/images/mainImages/instagramLogo.png" alt="logo"></h1>
+    <div id="container">
+        <div>
+            <header>
+                <nav class="">
+                    <div class="main-nav">
+                        <ul class="">
+                            <!-- logo -->
+                            <li class="logoLi">
+                                <img src="/images/mainImages/instagramLogo.png" alt="logo">
+                            </li>
+                            <li class="searchLi">
+                                <!-- search -->
+                                <i class="material-icons">search</i>
+                                <input type="text" placeholder="search">
+                                <!--samples https://freefrontend.com/css-search-boxes/ -->
+                            </li>
+                            <li class="iconsLi">
+                                <!-- icons -->
+                                <div class="iconsDiv">
+                                    <span>
+                                        <a href=""><i class="material-icons">home</i></a><br>
+                                        <!-- <a href=""><i class="fas fa-home">home</i></a><br> -->
+                                    </span>
+                                    <span>
+                                        <!-- <a href=""><i class="fa fa-paper-plane">SendSelect</i></a><br> -->
+                                        <a href=""><i class="fa fa-paper-plane-o"></i></a><br>
+                                    </span>
+                                    <span>
+                                        <!-- <a href=""><i class="fa fa-plus-square">AddSelect</i></a><br> -->
+                                        <a href=""><i class="fa fa-plus-square-o"></i></a><br>
+                                    </span>
+                                    <span>
+                                        <!-- <a href=""><i class="fa fa-safari">COMPASSSel</i></a><br> -->
+                                        <a href=""><i class="fa fa-compass"></i></a><br>
+                                    </span>
+                                    <span>
+                                        <!-- <a href=""><i class="fa fa-heart">HEARTSelect</i></a><br> -->
+                                        <a href=""><i class="fa fa-heart-o"></i></a><br>
+                                    </span>
+                                    <!-- me -->
+                                    <span class="myPic"><a href=""><img class="myPic" src="images/mainImages/baseProfilePic.jpeg" alt=""></a></span>
+                                </div>
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+        
+    <!-- main -->
+        <div class="mainDives">
+            <div class="">
+                <section>
+                    <div>
+                        <!-- friend's stories -->
+                        <div class="mainTop">
+                            <div class="friendStroies">
+                                <div class="">
+                                    <!-- button before -->
+                                    <div class="before">
+                                        <a class="picMoveBefore">
+                                            before
+                                        </a>
+                                        <!-- 버튼 다른 태태그그와 겹겹치치기 : https://heinafantasy.com/62   -->
+                                    </div> 
+                                    <!-- button after -->
+                                    <div class="next">
+                                        <a class="picMoveNext">
+                                            after
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <!-- friend story  -->
+                                <div class="friendStory">
+                                    <div class="friendNamePic">
+                                        <div class="storyPicBorder"></div>
+                                        <a href=""><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
+                                        <div>Hyoung0987</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- post -->
+                        <div class="peoplePost">
+                            <form action="">
+                                <div class="userNamePhoto">
+                                    <div class="friendInfo">
+                                        <span class="storyPicBorder postPicBorder"></span>
+                                        <span>
+                                            <a href=""><img class="postPic" src="/images/mainImages/baseProfilePic.jpeg" alt=""></a>
+                                        </span>
+                                        <span class="">
+                                            <div>Hyoung0987</div>
+                                            <div>Busan, Korea</div>
+                                        </span>
+                                        
+                                    </div>
+                                    <div>
+                                        <a href=""><i class="material-icons">more_horiz</i></a>
+                                    </div>
+                                </div>
+                                <div>
+                                    <!-- 여러장 -->
+                                    <div class="mainPics">
+                                        <img class="picSize" src="/images/mainImages/pic1.png" alt="">
+                                    </div>
+                                    
+                                    <!-- or -->
+                                    <div class="">
+                                        <!-- button before -->
+                                        <div class="before">
+                                            <a class="picMoveBefore">
+                                                before
+                                            </a>
+                                            <!-- 버튼 다른 태태그그와 겹겹치치기 : https://heinafantasy.com/62   -->
+                                        </div> 
+                                        <!-- button after -->
+                                        <div class="next">
+                                            <a class="picMoveNext">
+                                                after
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <!-- 소리 줄이고 키기 -->
+                                    <!-- <div>
+                                        <video src=""></video>
+                                    </div> -->
+                                    <div style="text-align:center">
+                                        <span class="dot"></span> 
+                                        <span class="dot"></span> 
+                                        <span class="dot"></span> 
+                                    </div>
+                                </div>
+                                <!-- 하트 / 댓글 / 쪽지 / pages / 저장 -->
+                                <div class="postActions">
+                                    <!-- 하트/ 댓글/ 쪽지 -->
+                                    <div class="postsReaction">
+                                        <span>
+                                            <!-- <a href=""><i class="fa fa-heart">HEARTSelect</i></a><br> -->
+                                            <a href=""><i class="fa fa-heart-o"></i></a><br>
+                                        </span>
+                                        <span>
+                                            <a href=""><i class="fa fa-comment-o"></i></a><br>
+                                            <!-- <a href=""><i class="fa fa-comment">commentSelect</i></a><br> -->    
+                                        </span>
+                                        <span>
+                                            <!-- <a href=""><i class="fa fa-paper-plane">SendSelect</i></a><br> -->
+                                            <a href=""><i class="fa fa-paper-plane-o"></i></a><br><br>
+                                        </span>
+                                    </div>
+                                    
+                                    <!-- 저장하기 -->
+                                    <div class="postsReaction">
+                                        <span>
+                                            <!-- pages  -->
+                                            <a href=""><i class="fa fa-bookmark-o"></i></a><br>
+                                            <!-- <a href=""><i class="fa fa-bookmark">bookMarkSelect</i></a> -->
+                                        </span>
+                                    </div>
+                                    
+                                </div>
+                                <div class="bottomPost">
+                                    <!-- 좋아요 누룬사람들 -->
+                                    <div class="">
+                                        <span>
+                                            <img class="whoLiked" src="images/mainImages/baseProfilePic.jpeg" alt="UserPicter">
+                                        </span>
+                                        <span>Liked by ____ and ___ 25 others</span>
+                                    </div>
+                                    <div>
+                                        <span><strong>Hyoung0987</strong></span>
+                                        <span>contents ... more</span>
+                                    </div>
+                                    <div>View all 1,111 comments</div>
+                                    <!-- 댓글 -->
+                                    <div>
+                                        <span>comments user1 </span><span>contents...more</span><a href=""><i class="fa fa-heart-o"></i></a><br>
+                                        <!-- <span>comments sser2 </span><span>contents</span><a href=""><i class="fa fa-heart-o">HEART</i></a><br>
+                                        <span>comments user3 </span><span>contents</span><a href=""><i class="fa fa-heart-o">HEART</i></a> -->
+                                        <!-- 시간 -->
+                                        <span>24 HOURS AGO</span>
+                                    </div>
+                                    
+                                </div>
+                                <div>
+                                    <!-- add comments -->
+                                    <div>
+                                        <i class="fa fa-smile-o"></i>
+                                        <input type="text" placeholder="Add a comment">
+                                        <button>Post</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
             </div>
-            <!-- search -->
-            <div>
-                <input type="text">
-                search
-                <i class="material-icons">search</i>
-            </div>
-            <!-- icons -->
-            <div>
-                <a href=""><i class="material-icons">home</i></a><br>
-                <!-- <a href=""><i class="fas fa-home">home</i></a><br> -->
 
-                <a href=""><i class="fa fa-heart">HEARTSelect</i></a><br>
-                <a href=""><i class="fa fa-heart-o">HEART</i></a><br>
-
-                <a href=""><i class="fa fa-safari">COMPASSSel</i></a><br>
-                <a href=""><i class="fa fa-compass">COMPASS</i></a><br>
-
-                <a href=""><i class="fa fa-paper-plane">SendSelect</i></a><br>
-                <a href=""><i class="fa fa-paper-plane-o">Send</i></a><br>
-
-                <a href=""><i class="fa fa-plus-square">AddSelect</i></a><br>
-                <a href=""><i class="fa fa-plus-square-o">Add</i></a><br>
-
-                <a href=""><img src="" alt=""></a>
-            </div>
-        </header>
-
-<!-- main -->
-        <section>
-            <div>
-                <!-- friend's stories -->
-                <div>
-                    <a href=""><img src="" alt="">사진</a>
-                    <span>name</span>
-                </div>
-                <!-- post -->
-                <div>
-                    <form action="">
+            <div class="mainTop">
+                <div class="sideMargin">
+                    <aside class="">
+                        <!-- my info -->
                         <div>
                             <img src="" alt="">
-                            <span>userName</span>
-                            <span>more</span>
+                            <span>userId</span>
+                            <span>nickName</span>
+                            <button>Switch</button>
                         </div>
+                        <!-- friends Suggestions -->
                         <div>
-                            <!-- 여러장 -->
+                            <span>Suggestions For You</span>
+                            <button>See All</button>
+                        </div>
+                        <!-- friends Suggestions list -->
+                        <div>
                             <img src="" alt="">
-                            <!-- or -->
-                            <!-- 소리 줄이고 키기 -->
-                            <video src=""></video>
+                            <span>name</span>
+                            <span>Followed by hqbar_busan + 7 more / Follows you / New to Instagram</span>
+                            <button>Follow</button>
                         </div>
-                        <!-- 하트 / 댓글 / 쪽지 / pages / 저장 -->
-                        <div>
-                            <a href=""><i class="fa fa-heart">HEARTSelect</i></a><br>
-                            <a href=""><i class="fa fa-heart-o">HEART</i></a><br>
             
-                            <a href=""><i class="fa fa-comment-o">comment</i></a><br>
-                            <a href=""><i class="fa fa-comment">commentSelect</i></a><br>
-        
-                            <a href=""><i class="fa fa-paper-plane">SendSelect</i></a><br>
-                            <a href=""><i class="fa fa-paper-plane-o">Send</i></a><br><br>
+                    </aside>
+    
+                    <!-- footer -->
+                    <footer>
+                        <div class=""> 
+                            <a class="links" href="">About</a>
+                            <a class="links" href="">Help</a>
+                            <a class="links" href="">Press</a>
+                            <a class="links" href="">API</a>
+                            <a class="links" href="">Jobs</a>
+                            <a class="links" href="">Privacy</a>
+                            <a class="links" href="">Impressum/Terms/NetzDG/UrhDaG</a>
+                            <a class="links" href="">Top Accounts</a>
+                            <a class="links" href="">Hashtags</a>
+                            <a class="links" href="">Language</a>
+
+                        
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                            
+                              English
+                        </div>
             
-                            <!-- pages  -->
-        
-                            <a href=""><i class="fa fa-bookmark-o">book Mark</i></a><br>
-                            <a href=""><i class="fa fa-bookmark">bookMarkSelect</i></a>
-                        </div>
-                        <!-- 좋아요 누룬사람들 -->
                         <div>
-                            <img src="" alt="UserPicter">
-                            <span>Liked by ____ and ___ 25 others</span>
+                            © 2022 INSTAGRAM FROM META
                         </div>
-                        <div>contents ... more</div>
-                        <div>View all 1,111 comments</div>
-                        <!-- 댓글 -->
-                        <div>
-                            <span>comments user1 </span><span>contents...more</span><a href=""><i class="fa fa-heart-o">HEART</i></a><br>
-                            <span>comments sser2 </span><span>contents</span><a href=""><i class="fa fa-heart-o">HEART</i></a><br>
-                            <span>comments user3 </span><span>contents</span><a href=""><i class="fa fa-heart-o">HEART</i></a>
-                            <!-- 시간 -->
-                            <span>24 HOURS AGO</span>
-                        </div>
-                        <!-- add comments -->
-                        <div>
-                            <i class="fa fa-smile-o">comment</i>
-                            <input type="text" placeholder="Add a comment">
-                            <button>Post</button>
-                        </div>
-                    </form>
+            
+                    </footer>
                 </div>
+                
             </div>
             
-            <aside>
-                <!-- my info -->
-                <div>
-                    <img src="" alt="">
-                    <span>userId</span>
-                    <span>nickName</span>
-                    <button>Switch</button>
-                </div>
-                <!-- friends Suggestions -->
-                <div>
-                    <span>Suggestions For You</span>
-                    <button>See All</button>
-                </div>
-                <!-- friends Suggestions list -->
-                <div>
-                    <img src="" alt="">
-                    <span>name</span>
-                    <span>Followed by hqbar_busan + 7 more / Follows you / New to Instagram</span>
-                    <button>Follow</button>
-                </div>
-
-            </aside>
-<!-- footer -->
-            <footer>
-                <div>
-                    About
-                    Help
-                    Press
-                    API
-                    Jobs
-                    Privacy
-                    Impressum/Terms/NetzDG/UrhDaG
-                    Locations
-                    Top Accounts
-                    Hashtags
-                    Language  English
-                </div>
-
-                <div>
-                    © 2022 INSTAGRAM FROM META
-                </div>
-
-            </footer>
-        </section>
+        </div>
+        
     </div>
 </body>
 </html>
