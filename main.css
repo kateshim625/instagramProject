@@ -14,10 +14,10 @@ ul {
     display: flex;
 }    
 header {
-    background-color: #fff;
+    /* background-color: #fff;
     width: 100%;
     position: fixed;
-    border-bottom: 2px solid #dbdbdb;
+    border-bottom: 2px solid #dbdbdb; */
 }
 
 footer {
@@ -31,28 +31,44 @@ footer div{
     line-height: 13px;
 }
 .main-nav {
-    max-width: 975px;
+    /* max-width: 975px; */
     padding: 14px 20px;
-    width: 100%;
     background: #fff;
+    background-color: #fff;
+    width: 100%;
+    position: fixed;
+    border-bottom: 2px solid #dbdbdb;
+
+}
+ul.headerNav {
+    padding: 0 20px;
+    width: 975px;
 }
 li.logoLi {
-    width: 334px;
+    width: 463px;
     text-align: left;
 }
 li.searchLi {
     align-items: center;
-    width: 268px;
+    width: 298px;
 }
 li.iconsLi {
     width: 334px;
 }
+.iconsDiv span {
+    padding: 0 20px;
+}
+
 div.iconsDiv {
     display: flex;
     align-items: center;
-    font-size: 22px; /* 아이콘 싸이즈 */
+    font-size: 22px;
+    /* margin: 0 20px;
+    padding: 0 20px; */
 }
-
+.iconsDiv span {
+    padding-right: 29px;
+}
 li.iconsLi span {
     height: 24px;
     width: 24px;
@@ -63,6 +79,7 @@ li.iconsLi span {
     height: 24px;
     /* https://gofnrk.tistory.com/28 */
     border-radius: 70%;
+    /* border: 1px solid black; */
 }
 
 
@@ -100,7 +117,7 @@ li.iconsLi span {
     background-repeat: no-repeat;
     background-position: -162px -99px;
     height: 33px;
-    width: 33px;
+    width: 32px;
     text-indent: -9999px;
 }
 .before {
@@ -159,6 +176,18 @@ li.iconsLi span {
     border-radius: 70%;
     margin-right: 10px;
 }
+span.postInfo {
+    width: 486px;
+    margin: 0 0 0 14px;
+    padding: 8px 0;
+    font-size: 11px;
+}
+
+span.postMore {
+    width: 40px;
+    height: 40px;
+    padding: 8px;
+}
 
 .userNamePhoto {
     height: 70px;
@@ -182,13 +211,19 @@ li.iconsLi span {
     display: flex;
 }
 
-.mainPics {
-    /* width: 600px; */
-}
 .picSize {
     width: 612px;
 } 
 
+.postBefore {
+    position: absolute;
+    bottom: 328px;
+}
+.postNext {
+    position: absolute;
+    right: 373px;
+    bottom: 328px
+}
 /* The dots/bullets/indicators */
 .dot {
     cursor: default;
@@ -206,32 +241,134 @@ li.iconsLi span {
 .postsReaction span {
     width: 40px;
     height: 40px;
-    font-size: 20px;
+    padding: 8px;
+    font-size: 26px;
+}
+/* like, comments, message, save icon area */
+span.saveBtn {
+    width: 480px;
+    text-align: right;
 }
 .postActions {
     display: flex;
+    margin: -12px 5px;
 }
 .bottomPost {
     padding: 8px;
 }
 .bottomPost div {
     padding: 2px;
-    font-size: 12px;
+    margin: 5px;
+    font-size: 15px;
 }
 .whoLiked {
       width: 20px;
       height: 20px;
       border-radius: 70%;
 }
+.regTime {
+    font-size: 11px!important;
+}
+.addComments {
+    border-top: 1px solid #dbdbdb;
+}
+.commentBorder {
+    margin: 0px 10px;
+}
 .mainDives {
     display: flex;
     margin: 0 46px;
 }
+.commentIcon {
+    font-size: 31px;
+}
+span.addComms input {
+    width: 511px;
+}
+span.postBtn {
+    font-size: 11px;
+    color: #0095f6;
+}
+.secondTop {
+    padding-top: 90px;
+    width: 325px;
+}
 .sideMargin {
     margin-left: 20px;
+}
+.myAccounts {
+    display: flex;
+    padding-top: 22px;
+    font-size: 12px;
+}
+.suggestions {
+    color: #8e8e8e;
+    font-size: 11px;
+    margin: 13px 0px 17px;
+}
+span.myAccountId div {
+    padding: 3px;
+}
+
+span.myAccountId {
+    margin: 12px;
+    padding-right: 49px;
+
+}
+.accountSwitchBtn {
+    padding: 20px;
+    color: #0095F6;
+}
+span.suggestionsLengh {
+    padding-right: 123px;
+}
+.suggestionBtn {
+    font-size: 12px;
+}
+.suggestNamePhoto {
+    padding: 3px 1px;
+}
+.suggestInfo {
+    display: flex;
+    font-size: 12px;
+    margin: -2px 0 -3px;
+}
+.suggestInfo {
+
+}
+p.followByInfo {
+    font-size: 10px;
+}
+.suggestInfoSize {
+    margin: 2px;
+}
+.suggestInfoSize p {
+    padding: 3px;
+}
+.suggestFollowBtn {
+    margin: 9px;
+    color: #0095F6;
+}
+.linksSize {
+    margin-top: 30px;
 }
 .links:not(:last-of-type)::after {
     content: '\00B7';
     margin: 0 0.25em 0 0.25em;
 }
+span.suggestMore {
+    display: flex;
+}
 /* nav one line : https://www.daleseo.com/css-align-right/ */
+
+.story__user-id {
+    max-width: 66px;
+    font-size: var(--font-size-extrasmall);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: 0.3px;
+  
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
