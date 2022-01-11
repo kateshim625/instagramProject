@@ -19,7 +19,9 @@ header {
     position: fixed;
     border-bottom: 2px solid #dbdbdb; */
 }
-
+button {
+    border: none;
+}
 footer {
     clear: both;
 }
@@ -38,6 +40,7 @@ footer div{
     width: 100%;
     position: fixed;
     border-bottom: 2px solid #dbdbdb;
+    z-index: 9999;
 
 }
 ul.headerNav {
@@ -45,15 +48,51 @@ ul.headerNav {
     width: 975px;
 }
 li.logoLi {
-    width: 463px;
+    width: 380px;
     text-align: left;
 }
 li.searchLi {
     align-items: center;
-    width: 298px;
+    width: 235px;
+    /* height: 27px; */
+    border-radius: 5px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    z-index: 1;
+    /* opacity: 1; */
+    background-color: #efefef;
+    color: rgb(142, 142, 142);
 }
+.searchBarInput {
+    width: 220px;
+    /* // 검색창 border 을 없앰으로써 자연스러워짐 */
+    border: none; 
+    height: 35px;
+    border: none;
+    /* // 기본 search 디자인을 없앰 */
+    -webkit-appearance: none; 
+    text-align: center;
+    margin: 0 10px;
+    /* //검색어가 길어졌을때 오른쪽으로 자연스럽게 검색되도록 하기 위해 */
+    overflow: auto; 
+    z-index: -1;
+    font-size: 14px;
+    background-color: #efefef;
+    text-align: left;
+}
+.search-bar__input:focus {
+  outline: none;
+  width: 300px;
+  text-align: left;
+}
+.material-icons {
+    font-size: 22px;
+    margin-left: 10px;
+  }
 li.iconsLi {
     width: 334px;
+    argin-left: 75px;
 }
 .iconsDiv span {
     padding: 0 20px;
@@ -63,8 +102,7 @@ div.iconsDiv {
     display: flex;
     align-items: center;
     font-size: 22px;
-    /* margin: 0 20px;
-    padding: 0 20px; */
+    margin-left: 30px;
 }
 .iconsDiv span {
     padding-right: 29px;
@@ -99,9 +137,12 @@ li.iconsLi span {
     font-size: 12px;
     text-overflow: ellipsis;
     display: flex;
+    /* 스토리 마지막 부분 잘라서 안에 넣기 */
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
-.picMoveBefore {
+.storyMoveBefore {
     position: absolute;
     background-image: url(/images/images.png);
     background-repeat: no-repeat;
@@ -110,8 +151,9 @@ li.iconsLi span {
     width: 33px;
     text-indent: -9999px;
     margin-left: 10px;
+    z-index: 1;
 }
-.picMoveNext {
+.storyMoveNext {
     position: absolute;
     background-image: url(/images/images.png);
     background-repeat: no-repeat;
@@ -119,22 +161,39 @@ li.iconsLi span {
     height: 33px;
     width: 32px;
     text-indent: -9999px;
+    z-index: 1;
 }
+
 .before {
     position: absolute;
-    bottom: 72px;
+    bottom: 61%;
 }
 .next {
     position: absolute;
-    right: 40px;
-    bottom: 72px;
+    left: 574px;
+    bottom: 61%;
 }
 .friendStory {
     padding: 3px 0;
     height: 83px;
-    width: 80px;
+    width: 70px;
     margin-left: 10px;
 }
+.storyBar {
+    overflow-x: auto; 
+    overflow-y: hidden; 
+}
+.friendStroyBar {
+    overflow-x: auto; 
+    overflow-y: hidden;
+    display: flex;
+    position: absolute;
+}
+/* 가로 스크롤바 없애기 */
+.friendStroyBar::-webkit-scrollbar {
+    display: none;
+}
+/* 스토리바 참고 : https://velog.io/@nsunny0908/TIL-29-instagram-clone */
 .friendNamePic {
     width: 78px;
     height: 122px;
@@ -142,7 +201,7 @@ li.iconsLi span {
 }
 /* friend's story circle boarder */
 .storyPicBorder {
-    background-image: url(/images/mainImages/pictureBorder.png);
+    /* background-image: url(/images/mainImages/pictureBorder.png); */
     background-repeat: no-repeat;
     background-size: 64px;
     position: absolute;
@@ -167,7 +226,7 @@ li.iconsLi span {
     border-radius: 3px;
     margin-bottom: 24px;
     width: 614px;
-    height: 907px;
+    position: relative;
 }
 
 .postPic {
@@ -176,6 +235,10 @@ li.iconsLi span {
     border-radius: 70%;
     margin-right: 10px;
 }
+video {
+    max-width: 99.99%;
+    height: 100%;
+  }
 span.postInfo {
     width: 486px;
     margin: 0 0 0 14px;
@@ -188,7 +251,9 @@ span.postMore {
     height: 40px;
     padding: 8px;
 }
-
+.mainPics {
+    
+}
 .userNamePhoto {
     height: 70px;
     /* padding: 0; */
@@ -209,21 +274,46 @@ span.postMore {
     width: 34px; 
     height: 34px;
     display: flex;
+    overflow-x: auto;
 }
 
 .picSize {
-    width: 612px;
+    width: 611px;
 } 
-
+.postPicPosition {
+    position: relative;
+    /* 이전, 다음 버튼 중앙정렬위함 */
+}
 .postBefore {
     position: absolute;
-    bottom: 328px;
+    bottom: 54%;
+    /* 이전, 다음 버튼 중앙정렬위함 */
 }
 .postNext {
     position: absolute;
-    right: 373px;
-    bottom: 328px
+    left: 93%;
+    bottom: 54%;
 }
+.postMoveBefore {
+    position: absolute;
+    background-image: url(/images/images.png);
+    background-repeat: no-repeat;
+    background-position: -130px -99px;
+    height: 33px;
+    width: 33px;
+    text-indent: -9999px;
+    margin-left: 10px;
+}
+.postMoveNext {
+    position: absolute;
+    background-image: url(/images/images.png);
+    background-repeat: no-repeat;
+    background-position: -162px -99px;
+    height: 33px;
+    width: 32px;
+    text-indent: -9999px;
+}
+
 /* The dots/bullets/indicators */
 .dot {
     cursor: default;
@@ -261,6 +351,9 @@ span.saveBtn {
     margin: 5px;
     font-size: 15px;
 }
+.bottomPost button {
+    background-color: #fff;
+}
 .whoLiked {
       width: 20px;
       height: 20px;
@@ -282,16 +375,33 @@ span.saveBtn {
 .commentIcon {
     font-size: 31px;
 }
+.fa {
+    margin-top: 2px;
+}
 span.addComms input {
     width: 511px;
+}
+input.commentInput {
+    border: none;
+    /* padding-bottom: 1px; */
+    height: 32px;
 }
 span.postBtn {
     font-size: 11px;
     color: #0095f6;
 }
+span.postBtn button {
+    background-color: #fff;
+    font-weight: bold;
+    height: 27px;
+    font-size: 13px;
+}
 .secondTop {
+    padding-right: 20px;
     padding-top: 90px;
     width: 325px;
+    position: fixed;
+    left: 680px;
 }
 .sideMargin {
     margin-left: 20px;
@@ -312,7 +422,7 @@ span.myAccountId div {
 
 span.myAccountId {
     margin: 12px;
-    padding-right: 49px;
+    padding-right: 34px;
 
 }
 .accountSwitchBtn {
@@ -320,13 +430,13 @@ span.myAccountId {
     color: #0095F6;
 }
 span.suggestionsLengh {
-    padding-right: 123px;
+    padding-right: 108px;
 }
 .suggestionBtn {
     font-size: 12px;
 }
 .suggestNamePhoto {
-    padding: 3px 1px;
+    padding: 7px 1px;
 }
 .suggestInfo {
     display: flex;
@@ -372,3 +482,7 @@ span.suggestMore {
     overflow: hidden;
     white-space: nowrap;
   }
+
+  /* div,span : https://mathslove.tistory.com/29 */
+  /* 플렉스 설명: https://studiomeal.com/archives/197 */
+  /* 레이아웃 설명 : https://sisir.tistory.com/25 */

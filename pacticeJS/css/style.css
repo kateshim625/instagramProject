@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background: #3b5999;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+.content {
+    /* middle */
+    display: flex;
+    /* opposite horizental 세로*/
+    flex-direction: column;
+    /* middle order */
+    align-items: center;
+} 
+#todo-form {
+    width: 300px;
+    height: 30px;
+    margin-top: 8rem;
+    /* 좌우정렬 */
+    display: flex;
+    /* 위아리 정렬? */
+    align-items: center;
+    /* 적당하게 간격맞추기 */
+    justify-content: space-around;
+    padding: 1rem;
+}
+label {
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+input {
+    padding: 0.1rem;
+    height: 20px;
+}
+button {
+    border: none;
+    background: #3b5999;
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.2rem;
+}
+#todo-list {
+    margin-top: 3rem;
+    list-style: none;
+    width: 300px;
+    padding-left: 1rem; 
+}
+.item {
+    padding: 1rem;
+}
+#msg {
+    font-size: 12px;
+    color: red;
+    display: none;
+}
