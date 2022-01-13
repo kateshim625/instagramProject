@@ -86,7 +86,7 @@ li.searchLi {
   width: 300px;
   text-align: left;
 }
-.material-icons {
+.fa-search, .fa-ellipsis-h {
     font-size: 22px;
     margin-left: 10px;
   }
@@ -141,27 +141,24 @@ li.iconsLi span {
     overflow-x: auto;
     overflow-y: hidden;
 }
-
-.storyMoveBefore {
+.storyMoveBefore, .storyMoveNext, .postMoveBefore, .postMoveNext {
     position: absolute;
     background-image: url(/images/images.png);
     background-repeat: no-repeat;
-    background-position: -130px -99px;
-    height: 33px;
-    width: 33px;
+    height: 28px;
+    width: 29px;
     text-indent: -9999px;
-    margin-left: 10px;
     z-index: 1;
+    border-radius: 18px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
 }
-.storyMoveNext {
-    position: absolute;
-    background-image: url(/images/images.png);
-    background-repeat: no-repeat;
+.storyMoveBefore, .postMoveBefore {
+    background-position: -130px -99px;
+    left: 11px;
+}
+.storyMoveNext, .postMoveNext {
     background-position: -162px -99px;
-    height: 33px;
-    width: 32px;
-    text-indent: -9999px;
-    z-index: 1;
+    right: -24px;
 }
 
 .before {
@@ -190,7 +187,7 @@ li.iconsLi span {
     position: absolute;
 }
 /* 가로 스크롤바 없애기 */
-.friendStroyBar::-webkit-scrollbar {
+::-webkit-scrollbar {
     display: none;
 }
 /* 스토리바 참고 : https://velog.io/@nsunny0908/TIL-29-instagram-clone */
@@ -241,7 +238,7 @@ video {
   }
 span.postInfo {
     width: 486px;
-    margin: 0 0 0 14px;
+    margin: 0 0 0 7px;
     padding: 8px 0;
     font-size: 11px;
 }
@@ -251,8 +248,9 @@ span.postMore {
     height: 40px;
     padding: 8px;
 }
-.mainPics {
-    
+
+.mainPics:first-child {
+    display: block;
 }
 .userNamePhoto {
     height: 70px;
@@ -279,7 +277,11 @@ span.postMore {
 
 .picSize {
     width: 611px;
+    display: none;
 } 
+.active {
+	display: block;
+}
 .postPicPosition {
     position: relative;
     /* 이전, 다음 버튼 중앙정렬위함 */
@@ -294,45 +296,32 @@ span.postMore {
     left: 93%;
     bottom: 54%;
 }
-.postMoveBefore {
-    position: absolute;
-    background-image: url(/images/images.png);
-    background-repeat: no-repeat;
-    background-position: -130px -99px;
-    height: 33px;
-    width: 33px;
-    text-indent: -9999px;
-    margin-left: 10px;
-}
-.postMoveNext {
-    position: absolute;
-    background-image: url(/images/images.png);
-    background-repeat: no-repeat;
-    background-position: -162px -99px;
-    height: 33px;
-    width: 32px;
-    text-indent: -9999px;
-}
-
 /* The dots/bullets/indicators */
 .dot {
     cursor: default;
     height: 5px;
     width: 5px;
     /* background-color: #a8a8a8; */
-    background-color: #0095f6; 
+    background-color: #a8a8a8; 
     display: inline-block;
+    border-radius: 3px;
+  }
+  .dotsMoveColor .colorActive {
+    background-color: #0095f6; 
+    
   }
   /* https://www.w3schools.com/howto/howto_js_slideshow.asp */
 .postsReaction {
     display: flex;
-    
 }
 .postsReaction span {
     width: 40px;
     height: 40px;
     padding: 8px;
     font-size: 26px;
+}
+.postsReaction i:hover {
+    color: #8e8e8e;
 }
 /* like, comments, message, save icon area */
 span.saveBtn {
@@ -345,6 +334,7 @@ span.saveBtn {
 }
 .bottomPost {
     padding: 8px;
+    font-weight: bold;
 }
 .bottomPost div {
     padding: 2px;
@@ -359,8 +349,22 @@ span.saveBtn {
       height: 20px;
       border-radius: 70%;
 }
+span.userCommentsList {
+    /* display: grid; */
+    padding-bottom: inherit;
+    margin: 0!important;
+    padding: 0! important;
+}
+span.commentSpan {
+    margin: 5px 382px 5px 0;
+
+}
+.notC {
+    color: #8e8e8e;
+}
 .regTime {
     font-size: 11px!important;
+    color: #8e8e8e;
 }
 .addComments {
     border-top: 1px solid #dbdbdb;
@@ -373,13 +377,20 @@ span.saveBtn {
     margin: 0 46px;
 }
 .commentIcon {
-    font-size: 31px;
+    font-size: 33px;
 }
-.fa {
-    margin-top: 2px;
+i.far.fa-smile {
+    margin: 10px;
+}
+.postsReaction .fas {
+    color: #e53b42!important; 
+}
+.fas:hover i{
+    color: #e53b42; 
 }
 span.addComms input {
-    width: 511px;
+    width: 467px;
+    height: 41px;
 }
 input.commentInput {
     border: none;
@@ -394,7 +405,7 @@ span.postBtn button {
     background-color: #fff;
     font-weight: bold;
     height: 27px;
-    font-size: 13px;
+    font-size: 19px;
 }
 .secondTop {
     padding-right: 20px;
@@ -461,6 +472,10 @@ p.followByInfo {
 }
 .linksSize {
     margin-top: 30px;
+}
+.linksSize a:hover {
+    color: #c7c7c7;
+    text-decoration: none;
 }
 .links:not(:last-of-type)::after {
     content: '\00B7';
