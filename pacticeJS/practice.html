@@ -28,6 +28,120 @@
             <li class="item">4. TODO</li> -->
         </ul>
     </div>
+
+
+
+
+    <!-- <script type="text/javascript" language="JavaScript">
+        function layer_toggle(obj) {
+                if (obj.style.display == 'none') obj.style.display = 'block';
+                else if (obj.style.display == 'block') obj.style.display = 'none';
+        }
+        </script>
+        
+        <div id=more01a style=display:block>
+            <a href=# onclick="layer_toggle(document.getElementById('more01a')); layer_toggle(document.getElementById('more01b'));return false;">
+                <p>현재 숨겨진 상태입니다.</p>
+            </a>
+        </div>
+        <div id=more01b style=display:none >
+            <a href=# onclick="layer_toggle(document.getElementById('more01a')); layer_toggle(document.getElementById('more01b'));return false;">
+                <p>펼친 상태입니다.</p>
+            </a>
+            <p>div 사이에 이렇게 내용을 적어주시면 됩니다.</p>
+        </div>
+        
+        <br>
+        
+        <div id=more02a style=display:block>
+            <a href=# onclick="layer_toggle(document.getElementById('more02a')); layer_toggle(document.getElementById('more02b'));return false;">
+                <p>이렇게 div id와 document.getElementById 값을 조절하면</p>
+            </a>
+        </div>
+        <div id=more02b style=display:none >
+            <a href=# onclick="layer_toggle(document.getElementById('more02a')); layer_toggle(document.getElementById('more02b'));return false;">
+                <p>여러개를 열고 닫을 수 있습니다.</p>
+            </a>
+            <p>어렵지 않습니다.</p>
+        </div> -->
+        
+        <!-- 출처: https://dhkim.tistory.com/191 [김동훈(Dong-Hoon Kim)'s Blog] -->
+    
+
+            <script type="text/javascript" language="JavaScript">
+            function layer_toggle(obj) {
+                    if (obj.style.display == 'none') obj.style.display = 'block';
+                    else if (obj.style.display == 'block') obj.style.display = 'none';
+            }
+            </script>
+            <style>
+            .more {border:1px dotted #EFEFEF;margin:5px;background:#F9F9F9;}
+            .more p {margin:5px;}
+            </style>
+            </HEAD>
+            <BODY>
+            
+            <div id=more01a style="DISPLAY: block">
+              <A onclick="layer_toggle(document.getElementById('more01a')); layer_toggle(document.getElementById('more01b'));return false;" href="#" >
+              <p>더 보기..</p></A>
+            </div>
+            
+            <div id=more01b style="DISPLAY: none">
+              <A onclick="layer_toggle(document.getElementById('more01a')); layer_toggle(document.getElementById('more01b'));return false;" href="#" >
+              <p>닫기..</p></A>
+            
+              <DIV class="more"><P>div 사이에 이렇게 내용을 적어주시면 됩니다.</P>
+            <P>어머나 세상에</P>
+            <P>아니 이럴수가?</P></DIV>
+            
+            
+            </div>
+            
+            <br><br>
+            
+            <div id=more02a style="DISPLAY: block"><A onclick="layer_toggle(document.getElementById('more02a')); layer_toggle(document.getElementById('more02b'));return false;" href="#" ><p>이렇게 div id와 document.getElementById 값을 조절하면</p></A></div>
+            <div id=more02b style="DISPLAY: none"><A onclick="layer_toggle(document.getElementById('more02a')); layer_toggle(document.getElementById('more02b'));return false;" href="#" ><p>여러개를 열고 닫을 수 있습니다.</p></A><p>어렵지 않습니다.</p></div>
+            
+            <br><br>
+            
+
+
+            <div class="storyBox">
+                <i class="fas fa-chevron-circle-left"></i>
+                <i class="fas fa-chevron-circle-right"></i>
+                <div class="storySpan" style="right: 0px;">
+                </div>
+            </div>
+
+
+<script type="text/javascript" language="JavaScript">
+
+                const prevBtn = document.querySelector(".fa-chevron-circle-left");
+const nextBtn = document.querySelector(".fa-chevron-circle-right");
+let right = parseInt(storySpan.style.right);
+
+const F00 = 265;
+
+function next() {
+    if(right < 795) {
+        right += F00;
+        storySpan.style.right = `${right}px`;
+    }
+}
+
+function prev() {
+    if(right > 0) {
+        right -= F00;
+        storySpan.style.right = `${right}px`;
+    }
+}
+
+nextBtn.addEventListener("click", next);
+prevBtn.addEventListener("click", prev);
+            </script>
+
+
+
     <script src="practice.js"></script>
 </body>
 

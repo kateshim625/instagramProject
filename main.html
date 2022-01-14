@@ -35,7 +35,7 @@
                         <ul class="headerNav">
                             <!-- logo -->
                             <li class="logoLi">
-                                <img src="images/mainImages/instagramLogo.png" alt="logo">
+                                <a href="main.html"><img src="images/mainImages/instagramLogo.png" alt="logo"></a>
                             </li>
                             <li class="searchLi">
                                 <!-- search -->
@@ -85,11 +85,18 @@
                         <div class="mainTop">
                             
                             <div class="friendStroies">
-                                
-                                
                                 <!-- friend story  -->
                                 <div class="storyBar">
-                                    <div class="friendStroyBar">
+                                    <!-- 
+                                        자바스크립트에서 style.color 등으로 들어가서 속성을 부여하는 건 가능한데! 
+                                        그건 html 태그에 inline style로 지정하게 되는 것. 
+                                        그래서 애초에 storySpan.style.right은 undefined인데 if(right < 795), 
+                                        if(right > 0) 등으로 undefined랑 숫자를 비교하려고 하니까 false가 되고 if문에서 통과가 안 된 거였다.
+
+                                        그래서 생각해낸 두 가지 해결 방법!
+                                        1. html에서 storyBox 태그에 인라인으로 style="right: 0px"을 삽입한다.
+                                     -->
+                                    <div class="friendStroyBar" id="friendStroyBar" style="right: 0px;">
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#">
@@ -98,98 +105,96 @@
                                                 <a href="#">
                                                     <img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt="">
                                                 </a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
-    
     
                                         <!-- friend story test copies started -->
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
+                                            </div>
+                                        </div>
+                                        <div class="friendStory">
+                                            <div class="friendNamePic">
+                                                <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
+                                                <a href="#"><img class="storyPicSwich" src="images/mainImages/6.png" alt=""></a>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
-                                            </div>
-                                        </div>
-                                        <div class="friendStory">
-                                            <div class="friendNamePic">
-                                                <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
-                                                <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>                                    
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <div class="friendStory">
                                             <div class="friendNamePic">
                                                 <a href="#"><img class="storyPicBorder" src="images/mainImages/pictureBorder.png" alt=""></a>
                                                 <a href="#"><img class="storyPicSwich" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
-                                                <div class="">Hyoung0987</div>
+                                                <div class="dashboard">Hyoung0987</div>
                                             </div>
                                         </div>
                                         <!-- friend story test copies end -->
-    
     
                                     </div>
                                 </div>
@@ -197,14 +202,14 @@
                                 <div class="sotryBtn">
                                     <!-- button before -->
                                     <div class="before">
-                                        <button type="button" class="storyMoveBefore">
+                                        <button type="button" id="storyMB" class="storyMoveBefore">
                                             before
                                         </button>
                                         <!-- 버튼 다른 태태그그와 겹겹치치기 : https://heinafantasy.com/62   -->
                                     </div> 
                                     <!-- button after -->
                                     <div class="next">
-                                        <button type="button" class="storyMoveNext">
+                                        <button type="button" id="storyMN" class="storyMoveNext">
                                             after
                                         </button>
                                     </div>
@@ -214,128 +219,131 @@
                             
                         </div>
                         <!-- post -->
-                        <form action="">
-                            <div class="peoplePost">
-                                <div class="userNamePhoto">
-                                    <div class="friendInfo">
-                                        <span class="storyPicBorder postPicBorder"></span>
+                        <div class="peoplePost">
+                            <div class="userNamePhoto">
+                                <div class="friendInfo">
+                                    <span class="storyPicBorder postPicBorder"></span>
+                                    <span>
+                                        <a href="#"><img class="postPic" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
+                                    </span>
+                                    <span class="postInfo">
+                                        <div class=""><p>Hyoung0987</p></div>
+                                        <div><p>Busan, Korea</p></div>
+                                    </span>
+                                    <span class="postMore">
+                                        <a href="#">
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </a>
+                                    </span>
+                                </div>
+
+                            </div>
+                            <div class="postPicPosition">
+                                <!-- or -->
+                                
+
+                                <!-- 여러장 -->
+                                <div class="mainPics">
+                                    <img id="post1" class="picSize active" src="images/mainImages/pic1.png" alt="">
+                                    <!-- 소리 줄이고 키기 -->
+                                    <video id="post2" class="picSize" width="100%" controls>
+                                        <source src="images/mainImages/exaple1.mp4" type="video/mp4">
+                                    </video>
+                                    <!-- https://www.codingfactory.net/11877 -->
+                                    <img id="post3" class="picSize" src="images/mainImages/5.jpeg" alt="">
+                                </div>
+                                <!-- 슬라이드참고 https://codepen.io/Coding-Artist/pen/RwKvbOe -->
+                                <div class="dotsMoveColor" style="text-align:center">
+                                    <span class="dot colorActive"></span> 
+                                    <span class="dot"></span> 
+                                    <span class="dot"></span> 
+                                </div>
+
+                                <div class="">
+                                    <!-- button before -->
+                                    <div class="postBefore">
+                                        <button type="button" onclick="postBeforeBtn()" class="postMoveBefore">
+                                            before
+                                        </button>
+                                        <!-- 버튼 다른 태태그그와 겹겹치치기 : https://heinafantasy.com/62   -->
+                                    </div> 
+                                    <!-- button after -->
+                                    <div class="postNext">
+                                        <button type="button" onclick="postNextBtn()" class="postMoveNext">
+                                            after
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- 하트 / 댓글 / 쪽지 / pages / 저장 -->
+                            <div class="postActions">
+                                <!-- 하트/ 댓글/ 쪽지 -->
+                                <div class="postsReaction">
+                                    <!--  like icon -->
+                                    <span>
+                                        <i onclick="liked()" id="likedBtn" class="far fa-heart"></i>
+                                        <!-- 참고: https://www.youtube.com/watch?v=rEXfjA0FkdU -->
+                                        <!-- clolors:  https://www.materialpalette.com/colors -->
+                                    </span>
+                                    <!--  comments icon -->
+                                    <span>
+                                        <i class="far fa-comment"></i>
+                                    </span>
+                                    <!--  send message icon -->
+                                    <span>
+                                        <i class="far fa-paper-plane"></i>
+                                    </span>
+                                    <!--  save icon -->
+                                    <span class="saveBtn">
+                                        <i class="far fa-bookmark"></i>
+                                    </span>
+                                </div>
+                                
+                            </div>
+                            <div class="bottomPost">
+                                <!-- someone who liked -->
+                                <div class="">
+                                    <span>
+                                        <img class="whoLiked" src="images/mainImages/baseProfilePic.jpeg" alt="UserPicter">
+                                    </span>
+                                    <span>Liked by <b><a>takealook_friends</a></b> and <b class="peopleWliked">3</b> others</span>
+                                </div>
+                                 
+                                
+                                <!-- writer & contents -->
+                                <div>
+                                    <span><strong>Hyoung0987</strong></span>
+                                    <span class="postContents">contents was more detiled then I thought which I re ...</span>
+                                    <!-- 참고해보기 : https://violideo.blogspot.com/2019/11/blog-post_18.html -->
+                                    <span><button type="button">more</button></span>
+                                </div>
+                                <div class><p>View all 1,111 comments</p></div>
+                                <!-- comments -->
+                                <div class="userComment">
+                                    <span class="userCommentsList">
+                                        <!-- <span>HyShim0987 </span>
+                                        <span>contents was pretty good then I thought which I re...  </span>
                                         <span>
-                                            <a href="#"><img class="postPic" src="images/mainImages/baseProfilePic.jpeg" alt=""></a>
+                                            <button type="button">more</button>
                                         </span>
-                                        <span class="postInfo">
-                                            <div class=""><p>Hyoung0987</p></div>
-                                            <div><p>Busan, Korea</p></div>
-                                        </span>
-                                        <span class="postMore">
-                                            <a href="#">
-                                                <i class="fas fa-ellipsis-h"></i>
+                                        <span>
+                                            <a href="#"><i class="fa fa-heart-o"></i>
                                             </a>
-                                        </span>
-                                    </div>
-
-                                </div>
-                                <div class="postPicPosition">
-                                    <!-- or -->
-                                    
-
-                                    <!-- 여러장 -->
-                                    <div class="mainPics">
-                                        <img id="post1" class="picSize active" src="images/mainImages/pic1.png" alt="">
-                                        <!-- 소리 줄이고 키기 -->
-                                        <video id="post2" class="picSize" width="100%" controls>
-                                            <source src="images/mainImages/exaple1.mp4" type="video/mp4">
-                                        </video>
-                                        <!-- https://www.codingfactory.net/11877 -->
-                                        <img id="post3" class="picSize" src="images/mainImages/5.jpeg" alt="">
-                                    </div>
-                                    <!-- 슬라이드참고 https://codepen.io/Coding-Artist/pen/RwKvbOe -->
-                                    <div class="dotsMoveColor" style="text-align:center">
-                                        <span class="dot colorActive"></span> 
-                                        <span class="dot"></span> 
-                                        <span class="dot"></span> 
-                                    </div>
-
-                                    <div class="">
-                                        <!-- button before -->
-                                        <div class="postBefore">
-                                            <button type="button" onclick="postBeforeBtn()" class="postMoveBefore">
-                                                before
-                                            </button>
-                                            <!-- 버튼 다른 태태그그와 겹겹치치기 : https://heinafantasy.com/62   -->
-                                        </div> 
-                                        <!-- button after -->
-                                        <div class="postNext">
-                                            <button type="button" onclick="postNextBtn()" class="postMoveNext">
-                                                after
-                                            </button>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <!-- 하트 / 댓글 / 쪽지 / pages / 저장 -->
-                                <div class="postActions">
-                                    <!-- 하트/ 댓글/ 쪽지 -->
-                                    <div class="postsReaction">
-                                        <!--  like icon -->
-                                        <span>
-                                            <i onclick="liked()" id="likedBtn" class="far fa-heart"></i>
-                                            <!-- 참고: https://www.youtube.com/watch?v=rEXfjA0FkdU -->
-                                            <!-- clolors:  https://www.materialpalette.com/colors -->
-                                        </span>
-                                        <!--  comments icon -->
-                                        <span>
-                                            <i class="far fa-comment"></i>
-                                        </span>
-                                        <!--  send message icon -->
-                                        <span>
-                                            <i class="far fa-paper-plane"></i>
-                                        </span>
-                                        <!--  save icon -->
-                                        <span class="saveBtn">
-                                            <i class="far fa-bookmark"></i>
-                                        </span>
-                                    </div>
+                                        </span> -->
+                                    </span>
                                     
                                 </div>
-                                <div class="bottomPost">
-                                    <!-- someone who liked -->
-                                    <div class="">
-                                        <span>
-                                            <img class="whoLiked" src="images/mainImages/baseProfilePic.jpeg" alt="UserPicter">
-                                        </span>
-                                        <span>Liked by ____ and ___ 25 others</span>
-                                    </div>
-                                    <!-- writer & contents -->
-                                    <div>
-                                        <span><strong>Hyoung0987</strong></span>
-                                        <span>contents was more detiled then I thought which I re ... </span>
-                                        <span><button type="button">more</button></span>
-                                    </div>
-                                    <div class><p>View all 1,111 comments</p></div>
-                                    <!-- comments -->
-                                    <div class="userComment">
-                                        <span class="userCommentsList">
-                                            <!-- <span>HyShim0987 </span>
-                                            <span>contents was pretty good then I thought which I re...  </span>
-                                            <span>
-                                                <button type="button">more</button>
-                                            </span>
-                                            <span>
-                                                <a href="#"><i class="fa fa-heart-o"></i>
-                                                </a>
-                                            </span> -->
-                                        </span>
-                                        
-                                    </div>
-                                    <!-- posted time  -->
-                                    <div class="regTime">
-                                        <span>24 HOURS AGO</span>
-                                    </div>
-                                    
+                                <!-- posted time  -->
+                                <div class="regTime">
+                                    <span>24 HOURS AGO</span>
                                 </div>
-                                <!-- add comments -->
-                                <div class="addComments">
-                                    <div class="commentBorder">
+                                
+                            </div>
+                            <!-- add comments -->
+                            <div class="addComments">
+                                <div class="commentBorder">
+                                    <form action="">
                                         <span>
                                             <span class="commentIcon">
                                                 <i class="far fa-smile"></i>
@@ -346,13 +354,15 @@
                                             </span>
                                         </span>
                                         <span class="postBtn">
-                                            <button type="button" class="addSubmit">Post</button>
+                                            <!-- form에서 타입을 버튼으로 주면 새로고핌됨 submit으로해놓고 이벤트 발생 금지시킴 -->
+                                            <button type="" class="addSubmit addSumitActive" disabled>Post</button>
                                         </span>
-                                    </div>
+                                    </form>
+                                    
                                 </div>
                             </div>
+                        </div>
 
-                        </form>
                     </div>
                 </section>
             </div>
@@ -407,7 +417,7 @@
                                             <p>Hyoung0987</p>
                                         </span>
                                         <span class="suggestMore">
-                                            <p class="followByInfo">Followed by hqbar_busan + 7 </p>
+                                            <p class="followByInfo dashboard">Followed by ______busan + 7 </p>
                                             <p class="followByInfo">more</p>
                                         </span>
                                     </div>
@@ -437,7 +447,7 @@
                     <p>Hyoung0987</p>
                 </span>
                 <span class="suggestMore">
-                    <p class="followByInfo">Followed by hqbar_busan + 7 </p>
+                    <p class="followByInfo dashboard">Followed by ______busan + 7 </p>
                     <p class="followByInfo">more</p>
                 </span>
             </div>
@@ -461,7 +471,7 @@
                     <p>Hyoung0987</p>
                 </span>
                 <span class="suggestMore">
-                    <p class="followByInfo">Followed by hqbar_busan + 7 </p>
+                    <p class="followByInfo dashboard">Followed by ______busan + 7 </p>
                     <p class="followByInfo">more</p>
                 </span>
             </div>
@@ -485,7 +495,7 @@
                     <p>Hyoung0987</p>
                 </span>
                 <span class="suggestMore">
-                    <p class="followByInfo">Followed by hqbar_busan + 7 </p>
+                    <p class="followByInfo dashboard">Followed by ______busan + 7 </p>
                     <p class="followByInfo">more</p>
                 </span>
             </div>
@@ -509,7 +519,7 @@
                     <p>Hyoung0987</p>
                 </span>
                 <span class="suggestMore">
-                    <p class="followByInfo">Followed by hqbar_busan + 7 </p>
+                    <p class="followByInfo dashboard">Followed by ______busan + 7 </p>
                     <p class="followByInfo">more</p>
                 </span>
             </div>
@@ -529,16 +539,16 @@
                     <!-- footer -->
                     <footer>
                         <div class="linksSize"> 
-                            <a class="links" href="">About</a>
-                            <a class="links" href="">Help</a>
-                            <a class="links" href="">Press</a>
-                            <a class="links" href="">API</a>
-                            <a class="links" href="">Jobs</a>
-                            <a class="links" href="">Privacy</a>
-                            <a class="links" href="">Impressum/Terms/NetzDG/UrhDaG</a>
-                            <a class="links" href="">Top Accounts</a>
-                            <a class="links" href="">Hashtags</a>
-                            <a class="links" href="">Language</a>
+                            <a class="links" href="#">About</a>
+                            <a class="links" href="#">Help</a>
+                            <a class="links" href="#">Press</a>
+                            <a class="links" href="#">API</a>
+                            <a class="links" href="#">Jobs</a>
+                            <a class="links" href="#">Privacy</a>
+                            <a class="links" href="#">Impressum/Terms/NetzDG/UrhDaG</a>
+                            <a class="links" href="#">Top Accounts</a>
+                            <a class="links" href="#">Hashtags</a>
+                            <a class="links" href="#">Language</a>
                             
                               English
                         </div>
