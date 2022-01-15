@@ -652,7 +652,61 @@ span.suggestMore {
         width: 100%;
     }
 }
-@media only screen and (max-width: 360px) {
+@media only screen and (max-width: 768px) {
+
+    /* main phone instagram app picture */
+    .secondTop {
+        display: none;
+    }
+    .mainTop {
+        padding-top: 60px;
+    }
+    .mainDives {
+        display: flex;
+        /* margin: 0 46px; */
+        justify-content: center;
+    }
+    li.searchLi {
+        display: none;
+    }
+    ul.headerNav {
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 425px) {
+
+    /* main phone instagram app picture */
+    .secondTop {
+        display: none;
+    }
+    .mainTop {
+        padding-top: 60px;
+    }
+    li.searchLi {
+        display: none;
+    }
+    ul.headerNav {
+        width: 100%;
+    }
+    li.logoLi {
+        text-align: left;
+    }
+    li.iconsLi {
+        width: 335px;        
+    }
+    .mainDives {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+    }
+    .next {
+        left: 577px;
+    }
+    .contentsPosition1 {
+        background-color: #fafafa;
+    }
+}
+@media only screen and (max-width: 375px) {
 
     /* main phone instagram app picture */
     .secondTop {
