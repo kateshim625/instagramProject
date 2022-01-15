@@ -1,7 +1,13 @@
 * {
     box-sizing: border-box;
 }
-
+a.noUnderline {
+    color: inherit!important;
+    text-decoration: none!important;
+}
+a.noUnderlineColor {
+    color: #333333!important;
+}
 div#container {
     background-color: #efefef;
 }
@@ -41,11 +47,14 @@ footer div{
     position: fixed;
     border-bottom: 2px solid #dbdbdb;
     z-index: 9999;
-
+    /* 중앙정렬 */
+    text-align: -webkit-center;
 }
 ul.headerNav {
-    padding: 0 20px;
-    width: 975px;
+    /* padding: 0 20px;
+    width: 975px; */
+    
+    width: 75%;
 }
 li.logoLi {
     width: 380px;
@@ -63,6 +72,7 @@ li.searchLi {
     /* opacity: 1; */
     background-color: #efefef;
     color: rgb(142, 142, 142);
+    margin: 0px 15px
 }
 .searchBarInput {
     width: 220px;
@@ -86,6 +96,25 @@ li.searchLi {
   width: 300px;
   text-align: left;
 }
+.clearBtn {
+    /* 
+    해지시 브라우즈 크기 줄이고 늘릴때마다 같이움직이게됨
+    position: absolute; */
+    background-image: url(images/images.png);
+    background-repeat: no-repeat;
+    background-position: -321px -333px;
+    /* right: 425px; */
+    height: 27px;
+    width: 15px;
+    margin: 6px 3px 0px 215px;
+    text-indent: 9999px;
+    z-index: 14;
+    display: none;
+}
+.searchClear {
+    position: fixed;
+    /* display: -webkit-box; */
+}
 .fa-search, .fa-ellipsis-h {
     font-size: 22px;
     margin-left: 10px;
@@ -102,7 +131,7 @@ div.iconsDiv {
     display: flex;
     align-items: center;
     font-size: 22px;
-    margin-left: 30px;
+    margin-left: 41px;
 }
 .iconsDiv span {
     padding-right: 29px;
@@ -216,18 +245,12 @@ li.iconsLi span {
     height: 66px;
 
 }
-.storyPicSwich {
-    width: 60px;
-    height: 60px;
-    /* https://gofnrk.tistory.com/28 */
-    border-radius: 70%;
-    overflow: hidden;
-    margin: 1px 0 5px 2px;
-}
+
 .dashboard {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    height: 15px;
     /* 출처: https://pureainu.tistory.com/273 [L.E.T]; */
 }
 .peoplePost {
@@ -261,7 +284,9 @@ span.postMore {
     height: 40px;
     padding: 8px;
 }
-
+.boldStyle {
+    font-weight: bold!important;
+}
 .mainPics:first-child {
     display: block;
 }
@@ -338,6 +363,22 @@ span.postMore {
 .postsReaction i:hover {
     color: #8e8e8e;
 }
+.pop {
+    animation: pop 0.2s linear 0s 1 alternate;
+}
+/* 
+heart 크기 잔깐 커졌다가 사라지게함
+https://velog.io/@dosilv/Instagram-Clone-Coding-Westagram-2 */
+@keyframes pop {
+    0% {transform: scale(1);}
+    100% {transform: scale(1.2);}
+}
+
+/* @keyframes shrink {
+    0% {transform: scale(1.2);}
+    100% {transform: scale(1);}
+} */
+
 /* like, comments, message, save icon area */
 span.saveBtn {
     width: 480px;
@@ -349,7 +390,6 @@ span.saveBtn {
 }
 .bottomPost {
     padding: 8px;
-    font-weight: bold;
 }
 .bottomPost div {
     padding: 2px;
@@ -363,6 +403,40 @@ span.saveBtn {
       width: 20px;
       height: 20px;
       border-radius: 70%;
+}
+/* contents ... 처리
+https://velog.io/@eunjin/Javascript-Project인스타그램-클론코딩 */
+span.postContents {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 420px;
+    display: inline-block;
+}
+span.postContents.open {
+    width: 560px;
+    text-overflow: '';
+    overflow: visible;
+    white-space: normal;
+    line-height: 19px;
+    margin: 5px 0;
+    /* 아이디 옆에 서 아래까지 글 차게만들기; */
+    display: contents;
+}
+/* 더보기버튼 */
+.feed__article-more-button {
+    display: inline;
+    cursor: pointer;
+    color: #777;
+    margin-left: 3px;
+}
+  
+.feed__article-more-button.open {
+    display: none;
+}
+.viewAllComments {
+    color: #8e8e8e;
+    display: none;
 }
 span.userCommentsList {
     /* display: grid; */
@@ -400,7 +474,10 @@ span.commentSpan {
 .mainDives {
     display: flex;
     margin: 0 46px;
+    /* 중앙정렬 */
+    justify-content: center;
 }
+
 .commentIcon {
     font-size: 33px;
 }
@@ -435,25 +512,27 @@ span.postBtn button {
 button.addSubmit.addSumitActive {
     opacity: 0.6;
 }
-.secondTop {
+.secondTop { /*                                     */
     padding-right: 20px;
     padding-top: 90px;
     width: 325px;
-    position: fixed;
     left: 680px;
 }
-.sideMargin {
-    margin-left: 20px;
+.sideMargin {/*                                     */
+    margin-left: 29px;
 }
-.myAccounts {
+.myAccounts {/*                                     */
     display: flex;
     padding-top: 22px;
     font-size: 12px;
 }
-.suggestions {
-    color: #8e8e8e;
-    font-size: 11px;
-    margin: 13px 0px 17px;
+.storyPicSwich {
+    width: 60px;
+    height: 60px;
+    /* https://gofnrk.tistory.com/28 */
+    border-radius: 70%;
+    overflow: hidden;
+    margin: 1px 0 5px 2px;
 }
 span.myAccountId div {
     padding: 3px;
@@ -468,6 +547,14 @@ span.myAccountId {
     padding: 20px;
     color: #0095F6;
 }
+.suggestions {
+    color: #8e8e8e;
+    font-size: 11px;
+    margin: 13px 0px 17px;
+}
+
+
+
 span.suggestionsLengh {
     padding-right: 108px;
 }
@@ -510,8 +597,12 @@ p.followByInfo {
     content: '\00B7';
     margin: 0 0.25em 0 0.25em;
 }
+/* 양쪽 정렬 */
 span.suggestMore {
-    display: flex;
+    display: -webkit-inline-box;
+}
+.followByMoreBtn {
+    display: none;
 }
 /* nav one line : https://www.daleseo.com/css-align-right/ */
 
@@ -530,3 +621,36 @@ span.suggestMore {
   /* div,span : https://mathslove.tistory.com/29 */
   /* 플렉스 설명: https://studiomeal.com/archives/197 */
   /* 레이아웃 설명 : https://sisir.tistory.com/25 */
+
+
+  /* =========== Desktop verstion =========== */
+
+@media only screen and (max-width: 876px) {
+
+    /* main phone instagram app picture */
+    .secondTop {
+        display: none;
+    }
+    ul.headerNav {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 637px) {
+
+    /* main phone instagram app picture */
+    .secondTop {
+        display: none;
+    }
+    .mainTop {
+        padding-top: 60px;
+    }
+    li.searchLi {
+        display: none;
+    }
+    ul.headerNav {
+        width: 100%;
+    }
+}
+
+/* 반응형 참고 : https://offbyone.tistory.com/121 */
